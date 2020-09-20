@@ -48,12 +48,29 @@
                     <a href="mainto:enquiries@cakeries.co.uk"><i class="fa fa-envelope-o" aria-hidden="true"></i> enquiries@cakeries.co.uk</a>
                 </div>
                 <div class="float-right">
+                    @if(!Auth::check())
                     <ul class="h_social list_style">
                         <li><a href="{{ url('/signin') }}">Sign in / Register</a></li>
                         <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                         <li><a href="#"><i class="fa fa-twitter"></i></a></li>
                         <li><a href="#"><i class="fa fa-instagram"></i></a></li>
                     </ul>
+                    @else
+                    <ul class="h_social1 list_style">
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" href="#" data-toggle="dropdown" id="dropdownMenuLink" aria-haspopup="true" aria-expanded="false" style="color: #fff;">My Account</a>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                <a href="#" class="dropdown-item" style="color: #7b7b7b;">Manage Account</a>
+                                <a href="#" class="dropdown-item" style="color: #7b7b7b;">My Order</a>
+                                <a href="#" class="dropdown-item" style="color: #7b7b7b;">Change Password</a>
+                                <a href="{{ route('logout') }}" class="dropdown-item" style="color: #7b7b7b;">Sign out</a>
+                            </div>
+                        </li>
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                    </ul>
+                    @endif
                 </div>
             </div>
         </div>

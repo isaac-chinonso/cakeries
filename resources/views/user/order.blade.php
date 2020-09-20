@@ -7,10 +7,10 @@ Manage Account || Cakeries
 <section class="product_area p_100 billing_details_area">
     <div class="container">
         <div class="return_option">
-            @if (date("H") < 12) <h1 style="font-size: 20px;">Good morning <img src="assets/img/morning1.png">, Chinonso</h1>
-                @elseif (date("H") >= 12 && date("H") < 16) <h1 style="font-size: 20px;">Good afternoon <img src="assets/img/afternoon.png">, Chinonso</h1>
+            @if (date("H") < 12) <h1 style="font-size: 20px;">Good morning <img src="assets/img/morning1.png">, {{ Auth::user()->profile->first()->fname }}</h1>
+                @elseif (date("H") >= 12 && date("H") < 16) <h1 style="font-size: 20px;">Good afternoon <img src="assets/img/afternoon.png">, {{ Auth::user()->profile->first()->fname }}</h1>
                     @elseif (date("H") >= 15)</h1>
-                    <h1 style="font-size: 20px;">Good evening <img src="assets/img/evening.png">, Chinonso</h1>
+                    <h1 style="font-size: 20px;">Good evening <img src="assets/img/evening.png">, {{ Auth::user()->profile->first()->fname }}</h1>
                     @endif
         </div>
         <div class="row product_inner_row">

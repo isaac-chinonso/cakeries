@@ -1,4 +1,4 @@
-@extends('layout.master')
+@extends('layout.master1')
 @section('title')
 Manage Account || Cakeries
 @endsection
@@ -7,10 +7,10 @@ Manage Account || Cakeries
 <section class="product_area p_100 billing_details_area">
     <div class="container">
         <div class="return_option">
-            @if (date("H") < 12) <h1 style="font-size: 20px;">Good morning <img src="assets/img/morning1.png">, Chinonso</h1>
-                @elseif (date("H") >= 12 && date("H") < 16) <h1 style="font-size: 20px;">Good afternoon <img src="assets/img/afternoon.png">, Chinonso</h1>
+            @if (date("H") < 12) <h1 style="font-size: 20px;">Good morning <img src="../assets/img/morning1.png">, {{ Auth::user()->profile->first()->fname }}</h1>
+                @elseif (date("H") >= 12 && date("H") < 16) <h1 style="font-size: 20px;">Good afternoon <img src="../assets/img/afternoon.png">, {{ Auth::user()->profile->first()->fname }}</h1>
                     @elseif (date("H") >= 15)</h1>
-                    <h1 style="font-size: 20px;">Good evening <img src="assets/img/evening.png">, Chinonso</h1>
+                    <h1 style="font-size: 20px;">Good evening <img src="assets/img/evening.png">, {{ Auth::user()->profile->first()->fname }}</h1>
                     @endif
         </div>
         <div class="row product_inner_row">
@@ -24,35 +24,35 @@ Manage Account || Cakeries
                         <form class="billing_form row" method="POST">
                             <div class="form-group col-md-6">
                                 <label>First Name *</label>
-                                <input type="text" class="form-control" name="fname" value="Chinonso">
+                                <input type="text" class="form-control" name="fname" value="{{ Auth::user()->profile->first()->fname }}">
                             </div>
                             <div class="form-group col-md-6">
                                 <label>Last Name *</label>
-                                <input type="text" class="form-control" name="lname" value="Isaac">
+                                <input type="text" class="form-control" name="lname" value="{{ Auth::user()->profile->first()->lname }}">
                             </div>
                             <div class="form-group col-md-6">
                                 <label>Email *</label>
-                                <input type="email" class="form-control" name="email" value="isaacchinonsogift@gmail.com" disabled>
+                                <input type="email" class="form-control" name="email" value="{{ Auth::user()->email }}" disabled>
                             </div>
                             <div class="form-group col-md-6">
                                 <label>Phone Number *</label>
-                                <input type="phone" class="form-control" name="phone" placeholder="Enter Phone Number">
+                                <input type="phone" class="form-control" name="phone" value="{{ Auth::user()->phone }}">
                             </div>
                             <div class="form-group col-md-6">
                                 <label>City *</label>
-                                <input type="text" class="form-control" name="city" placeholder="Enter City">
+                                <input type="text" class="form-control" name="city" value="{{ Auth::user()->profile->first()->city }}">
                             </div>
                             <div class="form-group col-md-6">
                                 <label>Country *</label>
-                                <input type="text" class="form-control" name="country" placeholder="Enter Country">
+                                <input type="text" class="form-control" name="country" value="{{ Auth::user()->profile->first()->country }}">
                             </div>
                             <div class="form-group col-md-6">
                                 <label>Postcode *</label>
-                                <input type="text" class="form-control" name="postcode" placeholder="Enter Postcode">
+                                <input type="text" class="form-control" name="postcode" value="{{ Auth::user()->profile->first()->postcode }}">
                             </div>
                             <div class="form-group col-md-6">
                                 <label>Fax</label>
-                                <input type="text" class="form-control" name="fax" placeholder="Enter Fax">
+                                <input type="text" class="form-control" name="fax" value="{{ Auth::user()->profile->first()->fax }}">
                             </div>
                             <div class="form-group col-md-12">
                                 <label>Address *</label>

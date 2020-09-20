@@ -17,18 +17,19 @@ Signin || Cakeries
                             <h3>Member Login</h3>
                             <hr>
                         </div>
-                        <form class="billing_form row" method="POST">
+                        <form class="billing_form row" method="POST" action="{{ route('signin') }}">
                             <div class="form-group col-md-12">
                                 <label>Email</label>
-                                <input type="email" class="form-control" name="email" placeholder="Enter Email">
+                                <input type="email" class="form-control" name="email" placeholder="Enter Email" value="{{ Request::old('email')}}">
                             </div>
                             <div class="form-group col-md-12">
                                 <label>Password *</label>
-                                <input type="password" class="form-control" name="password" placeholder="Enter password">
+                                <input type="password" class="form-control" name="password" placeholder="Enter password" value="{{ Request::old('password')}}">
                             </div>
                             <div class="form-group col-md-12 text-center">
-                                <button class="btn colo">Login now</button>
+                                <button class="btn colo" type="submit">Login</button>
                             </div>
+                            <input type="hidden" name="_token" value="{{ Session::token() }}">
                         </form>
                     </div>
                 </div>

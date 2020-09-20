@@ -67,7 +67,7 @@ class PageController extends Controller
         return view('frontend.lady');
     }
 
-    public function signin()
+    public function login()
     {
         return view('frontend.login');
     }
@@ -75,16 +75,6 @@ class PageController extends Controller
     public function register()
     {
         return view('frontend.register');
-    }
-
-    public function myaccount()
-    {
-        return view('user.account');
-    }
-
-    public function myorder()
-    {
-        return view('user.order');
     }
 
     public function singlecake()

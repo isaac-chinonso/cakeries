@@ -1,6 +1,6 @@
 @extends('layout.app')
 @section('title')
-Admin Dashboard || Cakeries
+Dashboard || Cakeries
 @endsection
 @section('content')
 
@@ -14,10 +14,10 @@ Admin Dashboard || Cakeries
     <div class="row page-titles">
         <div class="col-md-5 align-self-center">
             <h3 class="text-themecolor">
-                @if (date("H") < 12) <h1 style="font-size: 20px;">Good morning <img src="../assets/img/morning1.png">, Admin</h1>
-                    @elseif (date("H") >= 12 && date("H") < 16) <h1 style="font-size: 20px;">Good afternoon <img src="../assets/img/afternoon.png">, Admin</h1>
-                        @elseif (date("H") >= 15)</h1>
-                        <h1 style="font-size: 20px;">Good evening <img src="../assets/img/evening.png">, Admin</h1>
+                @if (date("H") < 12) <h1 style="font-size: 20px;">Good morning <img src="../assets/img/morning1.png">, {{ Auth::user()->profile->first()->fname }}</h1>
+                    @elseif (date("H") >= 12 && date("H") < 16) <h1 style="font-size: 20px;">Good afternoon <img src="../assets/img/afternoon.png">, {{ Auth::user()->profile->first()->fname }}</h1>
+                        @elseif (date("H") >= 15  && date("H") < 24)</h1>
+                        <h1 style="font-size: 20px;">Good evening <img src="../assets/img/evening.png">, {{ Auth::user()->profile->first()->fname }}</h1>
                         @endif
             </h3>
         </div>
@@ -26,9 +26,6 @@ Admin Dashboard || Cakeries
                 <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
                 <li class="breadcrumb-item active">Dashboard</li>
             </ol>
-        </div>
-        <div>
-            <button class="right-side-toggle waves-effect waves-light btn-inverse btn btn-circle btn-sm pull-right m-l-10"><i class="ti-settings text-white"></i></button>
         </div>
     </div>
     <!-- ============================================================== -->
@@ -101,7 +98,7 @@ Admin Dashboard || Cakeries
                         <!-- Row -->
                         <div class="row">
                             <div class="col-8">
-                                <h2>0 </h2>
+                                <h2>{{ $allusers }}</h2>
                                 <h6>Users</h6>
                             </div>
                             <div class="col-4 align-self-center text-right p-l-0">
@@ -113,13 +110,8 @@ Admin Dashboard || Cakeries
             </div>
         </div>
 
+       
 
-        <!-- Row -->
-
-        <!-- Row -->
-        <!-- Row -->
-
-        <!-- Row -->
         <!-- ============================================================== -->
         <!-- End PAge Content -->
         <!-- ============================================================== -->

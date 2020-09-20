@@ -21,15 +21,17 @@ Route::get('/contact', 'Frontend\PageController@contact');
 
 Route::get('/single-cake-view', 'Frontend\PageController@singlecake');
 
-Route::get('/signin', 'Frontend\PageController@signin');
+Route::get('/login', 'Frontend\PageController@login')->name('login');
 
 Route::get('/register', 'Frontend\PageController@register');
 
-Route::get('/manage-account', 'Frontend\PageController@myaccount');
+Route::post('/sigin', 'Auth\UserController@signin')->name('signin');
 
-Route::get('/my-order', 'Frontend\PageController@myorder');
+Route::get('/logout', 'Auth\UserController@logout')->name('logout');
 
-Route::group([ 'middleware' => 'web', 'prefix' => 'cake', 'before' => 'cake' ], function(){
+Route::post('/savelogin', 'Auth\UserController@savelogin')->name('savelogin');
+
+Route::group(['middleware' => 'web', 'prefix' => 'cake', 'before' => 'cake'], function () {
 
     Route::get('/allcakes', 'Frontend\PageController@allcake');
 
@@ -46,11 +48,24 @@ Route::group([ 'middleware' => 'web', 'prefix' => 'cake', 'before' => 'cake' ], 
     Route::get('/girl', 'Frontend\PageController@girl');
 
     Route::get('/lady', 'Frontend\PageController@lady');
-
 });
 
-Route::group([ 'middleware' => 'web', 'prefix' => 'admin', 'before' => 'admin' ], function(){
+Route::group(['middleware' => 'auth', 'prefix' => 'user', 'before' => 'user'], function () {
+
+    Route::get('/manage-account', 'Frontend\PostController@myaccount')->name('myaccount');
+
+    Route::get('/my-order', 'Frontend\PostController@myorder');
+});
+
+Route::group(['middleware' => 'auth', 'prefix' => 'admin', 'before' => 'admin'], function () {
 
     Route::get('/dashboard', 'Admin\PageController@admindashboard');
 
+    Route::get('/categories', 'Admin\PageController@admincategories');
+
+    Route::get('/users', 'Admin\PageController@adminusers');
+
+    Route::get('/orders', 'Admin\PageController@adminorder');
+
+    Route::get('/products', 'Admin\PageController@adminproduct');
 });

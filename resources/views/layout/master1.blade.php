@@ -51,12 +51,29 @@
                         <a href="mainto:enquiries@cakeries.co.uk"><i class="fa fa-envelope-o" aria-hidden="true"></i> enquiries@cakeries.co.uk</a>
                 </div>
                 <div class="float-right">
+                    @if(!Auth::check())
                     <ul class="h_social list_style">
                         <li><a href="{{ url('/signin') }}">Sign in / Register</a></li>
                         <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                         <li><a href="#"><i class="fa fa-twitter"></i></a></li>
                         <li><a href="#"><i class="fa fa-instagram"></i></a></li>
                     </ul>
+                    @else
+                    <ul class="h_social1 list_style">
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" href="#" data-toggle="dropdown" id="dropdownMenuLink" aria-haspopup="true" aria-expanded="false" style="color: #fff;">My Account</a>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                <a href="#" class="dropdown-item" style="color: #7b7b7b;">Manage Account</a>
+                                <a href="#" class="dropdown-item" style="color: #7b7b7b;">My Order</a>
+                                <a href="#" class="dropdown-item" style="color: #7b7b7b;">Change Password</a>
+                                <a href="{{ route('logout') }}" class="dropdown-item" style="color: #7b7b7b;">Sign out</a>
+                            </div>
+                        </li>
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                    </ul>
+                    @endif
                 </div>
             </div>
         </div>
@@ -185,31 +202,31 @@
     <!--================End Search Box Area =================-->
 
 
-     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-     <script src="../assets/js/jquery-3.2.1.min.js"></script>
-        <!-- Include all compiled plugins (below), or include individual files as needed -->
-        <script src="../assets/js/popper.min.js"></script>
-        <script src="../assets/js/bootstrap.min.js"></script>
-        <!-- Rev slider js -->
-        <script src="../assets/vendors/revolution/js/jquery.themepunch.tools.min.js"></script>
-        <script src="../assets/vendors/revolution/js/jquery.themepunch.revolution.min.js"></script>
-        <script src="../assets/vendors/revolution/js/extensions/revolution.extension.actions.min.js"></script>
-        <script src="../assets/vendors/revolution/js/extensions/revolution.extension.video.min.js"></script>
-        <script src="../assets/vendors/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
-        <script src="../assets/vendors/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
-        <script src="../assets/vendors/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
-        <!-- Extra plugin js -->
-        <script src="../assets/vendors/owl-carousel/owl.carousel.min.js"></script>
-        <script src="../assets/vendors/magnifc-popup/jquery.magnific-popup.min.js"></script>
-        <script src="../assets/vendors/isotope/imagesloaded.pkgd.min.js"></script>
-        <script src="../assets/vendors/isotope/isotope.pkgd.min.js"></script>
-        <script src="../assets/vendors/datetime-picker/js/moment.min.js"></script>
-        <script src="../assets/vendors/datetime-picker/js/bootstrap-datetimepicker.min.js"></script>
-        <script src="../assets/vendors/nice-select/js/jquery.nice-select.min.js"></script>
-        <script src="../assets/vendors/jquery-ui/jquery-ui.min.js"></script>
-        <script src="../assets/vendors/lightbox/simpleLightbox.min.js"></script>
-        
-        <script src="../assets/js/theme.js"></script>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="../assets/js/jquery-3.2.1.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../assets/js/popper.min.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <!-- Rev slider js -->
+    <script src="../assets/vendors/revolution/js/jquery.themepunch.tools.min.js"></script>
+    <script src="../assets/vendors/revolution/js/jquery.themepunch.revolution.min.js"></script>
+    <script src="../assets/vendors/revolution/js/extensions/revolution.extension.actions.min.js"></script>
+    <script src="../assets/vendors/revolution/js/extensions/revolution.extension.video.min.js"></script>
+    <script src="../assets/vendors/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+    <script src="../assets/vendors/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+    <script src="../assets/vendors/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+    <!-- Extra plugin js -->
+    <script src="../assets/vendors/owl-carousel/owl.carousel.min.js"></script>
+    <script src="../assets/vendors/magnifc-popup/jquery.magnific-popup.min.js"></script>
+    <script src="../assets/vendors/isotope/imagesloaded.pkgd.min.js"></script>
+    <script src="../assets/vendors/isotope/isotope.pkgd.min.js"></script>
+    <script src="../assets/vendors/datetime-picker/js/moment.min.js"></script>
+    <script src="../assets/vendors/datetime-picker/js/bootstrap-datetimepicker.min.js"></script>
+    <script src="../assets/vendors/nice-select/js/jquery.nice-select.min.js"></script>
+    <script src="../assets/vendors/jquery-ui/jquery-ui.min.js"></script>
+    <script src="../assets/vendors/lightbox/simpleLightbox.min.js"></script>
+
+    <script src="../assets/js/theme.js"></script>
 </body>
 
 </html>
