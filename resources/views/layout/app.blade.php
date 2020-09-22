@@ -71,7 +71,7 @@
                         <!-- ============================================================== -->
                         <!-- Comment -->
                         <!-- ============================================================== -->
-                      
+
                     </ul>
                     <!-- ============================================================== -->
                     <!-- User profile and search -->
@@ -107,7 +107,7 @@
             <div class="scroll-sidebar">
                 <!-- Sidebar navigation-->
                 <nav class="sidebar-nav">
-                <ul>
+                    <ul>
                         <li class="nav-small-cap">PERSONAL</li>
                         <li class="{{ request()->is('admin/dashboard*') ? 'active' : '' }}">
                             <a href="{{ url('/admin/dashboard') }}"><i class="mdi mdi-monitor"></i><span class="hide-menu">Dashboard</span></a>

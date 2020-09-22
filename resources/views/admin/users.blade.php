@@ -48,6 +48,7 @@ Users || Cakeries
                             <table id="myTable" class="table table-bordered table-striped">
                                 <thead>
                                     <tr>
+                                        <th>S/N</th>
                                         <th>fullname</th>
                                         <th>Email</th>
                                         <th>Phone</th>
@@ -59,8 +60,10 @@ Users || Cakeries
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    <?php $number = 1; ?>
                                     @foreach($allusers as $users)
                                     <tr>
+                                        <td>{{ $number }} </td>
                                         <td>{{ $users->profile->first()->fname }} {{ $users->profile->first()->lname }}</td>
                                         <td>{{ $users->email }}</td>
                                         <td>{{ $users->profile->first()->phone }}</td>
@@ -71,6 +74,7 @@ Users || Cakeries
                                         <td>{{ $users->profile->first()->fax}}</td>
                                     </tr>
                                     @endforeach
+                                    <?php $number++; ?>
                                 </tbody>
                             </table>
                         </div>

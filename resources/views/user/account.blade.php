@@ -10,7 +10,7 @@ Manage Account || Cakeries
             @if (date("H") < 12) <h1 style="font-size: 20px;">Good morning <img src="../assets/img/morning1.png">, {{ Auth::user()->profile->first()->fname }}</h1>
                 @elseif (date("H") >= 12 && date("H") < 16) <h1 style="font-size: 20px;">Good afternoon <img src="../assets/img/afternoon.png">, {{ Auth::user()->profile->first()->fname }}</h1>
                     @elseif (date("H") >= 15)</h1>
-                    <h1 style="font-size: 20px;">Good evening <img src="assets/img/evening.png">, {{ Auth::user()->profile->first()->fname }}</h1>
+                    <h1 style="font-size: 20px;">Good evening <img src="../assets/img/evening.png">, {{ Auth::user()->profile->first()->fname }}</h1>
                     @endif
         </div>
         <div class="row product_inner_row">

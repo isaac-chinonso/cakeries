@@ -8,7 +8,7 @@ Single Cake || Cakeries
 <section class="banner_area">
     <div class="container">
         <div class="banner_text">
-            <h3>Single Cake</h3>
+            <h3>Cake Details</h3>
             <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Cakes</a></li>
@@ -22,14 +22,13 @@ Single Cake || Cakeries
     <div class="container">
         <div class="row product_d_price">
             <div class="col-lg-6">
-                <div class="product_img"><img class="img-fluid" src="assets/img/product/product-details-1.jpg" alt=""></div>
+                <div class="product_img"><img class="img-fluid" src="assets/img/product/big1.jpg" alt=""></div>
             </div>
             <div class="col-lg-6">
                 <div class="product_details_text">
-                    <h4>Brown Cake</h4>
+                    <h4>Beautiful Begining</h4>
                     <p>Cake colours, images and layout are for illustration ONLY. All our cakes are hand finished so the final product may vary. In case you want to change the colours then please add remarks during checkout or call the branch after placing the order.</p>
-                    <h5>Category :<span>Boys Cake</span> Size :<span>Icing</span></h5>
-                    <h5>Type :<span>Icing</span></h5>
+                    <h5>Category : Wedding Cake </h5>
                     <a class="pink_more" href="#">Order Now</a>
                 </div>
             </div>

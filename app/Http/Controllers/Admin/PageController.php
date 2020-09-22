@@ -6,19 +6,26 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use App\User;
+use App\Category;
+use App\Product;
+use App\Order;
 
 class PageController extends Controller
 {
     public function admindashboard()
     {
         $user = Auth::user();
-    	$data['allusers'] = User::where('role_id', '=', 2)->count();
+        $data['allusers'] = User::where('role_id', '=', 2)->count();
+        $data['allcategory'] = Category::where('status', '=', 1)->count();
+        $data['allproduct'] = Product::where('status', '=', 1)->count();
+        $data['allorder'] = Order::where('status', '=', 1)->count();
         return view('admin.dashboard', $data);
     }
 
     public function admincategories()
     {
-        return view('admin.categories');
+        $data['categories'] = Category::where('status', '=', 1)->get();
+        return view('admin.categories', $data);
     }
 
     public function adminusers()
@@ -34,6 +41,15 @@ class PageController extends Controller
 
     public function adminproduct()
     {
-        return view('admin.product');
+        $data['categories'] = Category::all();
+        $data['products'] = Product::where('status', '=', 1)->get();
+        return view('admin.product', $data);
+    }
+
+    public function archivedproduct()
+    {
+        $data['categories'] = Category::all();
+        $data['products'] = Product::where('status', '=', 0)->get();
+        return view('admin.archivedproduct', $data);
     }
 }

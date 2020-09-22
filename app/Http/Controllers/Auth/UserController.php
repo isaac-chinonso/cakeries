@@ -36,6 +36,10 @@ class UserController extends Controller
             return redirect()->intended(route('myaccount'));
         }
 
+        if (Auth::attempt(['email' => $request['email'], 'password' => $request['password'], 'role_id' => '2'])) {
+
+            return redirect()->intended(route('myaccount'));
+        }
         \Session::flash('warning_message', 'These credentials do not match our records.');
 
         return redirect()->back();
@@ -92,6 +96,6 @@ class UserController extends Controller
         $user = Auth::user();
 
         Auth::logout();
-        return redirect()->route('signin');
+        return redirect()->route('login');
     }
 }

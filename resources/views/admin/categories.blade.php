@@ -32,21 +32,22 @@ Categories || Cakeries
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                    <h4 class="modal-title" id="myModalLabel">Add Category</h4>
+                        <h4 class="modal-title" id="myModalLabel">Add Category</h4>
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
                     </div>
-                    <div class="modal-body">
-                        <form>
+                    <form method="POST" action="{{ url('/admin/save-category') }}">
+                        <div class="modal-body">
                             <div class="form-group">
-                                <label for="recipient-name" class="control-label">Category Name:</label>
-                                <input type="text" class="form-control" id="recipient-name" placeholder="Enter Category Name">
+                                <label class="control-label">Category Name:</label>
+                                <input type="text" class="form-control" name="name" value="{{ Request::old('name')}}">
                             </div>
-                        </form>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary btn-sm waves-effect waves-light">Add Category</button>
-                    </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-primary btn-sm waves-effect waves-light">Add Category</button>
+                        </div>
+                        <input type="hidden" name="_token" value="{{ Session::token() }}">
+                    </form>
                 </div>
             </div>
         </div>
@@ -63,6 +64,9 @@ Categories || Cakeries
         <!-- ============================================================== -->
         <!-- Start Page Content -->
         <!-- ============================================================== -->
+        @include('include.success')
+        @include('include.warning')
+        @include('include.error')
         <div class="row">
             <div class="col-md-12">
                 <div class="card">
@@ -73,16 +77,79 @@ Categories || Cakeries
                             <table id="myTable" class="table table-bordered table-striped">
                                 <thead>
                                     <tr>
+                                        <th>S/N</th>
                                         <th>Name</th>
                                         <th>Action</th>
                                     </tr>
                                 </thead>
+                                <?php $number = 1; ?>
                                 <tbody>
+                                    @foreach($categories as $cat)
                                     <tr>
-                                        <td>Tiger Nixon</td>
-                                        <td><button class="btn btn-danger btn-sm"><i class="fa fa-times"></i> Delete Category</button></td>
+                                        <td>{{ $number }}</td>
+                                        <td>{{ $cat->name }}</td>
+                                        <td>
+                                            <div class="dropdown">
+                                                <button type="button" class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown">
+                                                    <i class="fa fa-tasks"></i> Action
+                                                </button>
+                                                <div class="dropdown-menu">
+                                                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#responsive-modal1{{ $cat->id }}">Edit</a>
+                                                    <div class="dropdown-divider"></div>
+                                                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#responsive-modal2{{ $cat->id }}">Delete</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <!-- modal content -->
+                                        <div id="responsive-modal1{{ $cat->id }}" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h4 class="modal-title" id="myModalLabel">Edit Category</h4>
+                                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                                    </div>
+                                                    <form method="POST" action="{{ route('updatecategory', $cat->id) }}">
+                                                        <div class="modal-body">
+                                                            <div class="form-group">
+                                                                <label class="control-label">Category Name:</label>
+                                                                <input type="text" class="form-control" name="name" value="{{ $cat->name }}">
+                                                            </div>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">Close</button>
+                                                            <button type="submit" class="btn btn-primary btn-sm waves-effect waves-light">Update Category</button>
+                                                        </div>
+                                                        <input type="hidden" name="_token" value="{{ Session::token() }}">
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- /.modal -->
+                                        <!-- modal content -->
+                                        <div id="responsive-modal2{{ $cat->id }}" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h4 class="modal-title" id="myModalLabel">Delete Category</h4>
+                                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <h4><strong>Confirm Deletion</strong></h4>
+                                                        <p>Are you sure you want to Delete {{ $cat->name }} Category</p>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">Close</button>
+                                                        <a href="{{ route('deletecategory',$cat->id) }}" class="btn btn-danger btn-sm waves-effect waves-light">Delete Category</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- /.modal -->
                                     </tr>
+                                    <?php $number++; ?>
+                                    @endforeach
                                 </tbody>
+
                             </table>
                         </div>
                     </div>

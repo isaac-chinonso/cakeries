@@ -47,7 +47,7 @@ Dashboard || Cakeries
                         <!-- Row -->
                         <div class="row">
                             <div class="col-8">
-                                <h2>0 </h2>
+                                <h2>{{ $allorder }} </h2>
                                 <h6>Order Received</h6>
                             </div>
                             <div class="col-4 align-self-center text-right  p-l-0">
@@ -64,7 +64,7 @@ Dashboard || Cakeries
                         <!-- Row -->
                         <div class="row">
                             <div class="col-8">
-                                <h2 class="">0 </h2>
+                                <h2 class="">{{ $allproduct }} </h2>
                                 <h6>All Product</h6>
                             </div>
                             <div class="col-4 align-self-center text-right p-l-0">
@@ -81,7 +81,7 @@ Dashboard || Cakeries
                         <!-- Row -->
                         <div class="row">
                             <div class="col-8">
-                                <h2>0 </h2>
+                                <h2>{{ $allcategory }} </h2>
                                 <h6>All Categories</h6>
                             </div>
                             <div class="col-4 align-self-center text-right p-l-0">

@@ -9,6 +9,9 @@ Signin || Cakeries
         <div class="return_option">
             <h4>New customer? <a href="{{ url('/register') }}">Click here to register</a></h4>
         </div>
+        @include('include.success')
+        @include('include.warning')
+        @include('include.error')
         <div class="row product_inner_row">
             <div class="col-lg-9">
                 <div class="order_box_price">

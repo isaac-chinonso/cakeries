@@ -59,13 +59,30 @@ Route::group(['middleware' => 'auth', 'prefix' => 'user', 'before' => 'user'], f
 
 Route::group(['middleware' => 'auth', 'prefix' => 'admin', 'before' => 'admin'], function () {
 
-    Route::get('/dashboard', 'Admin\PageController@admindashboard');
+    Route::get('/dashboard', 'Admin\PageController@admindashboard')->name('admindashboard');
 
     Route::get('/categories', 'Admin\PageController@admincategories');
+
+    Route::post('/save-category', 'Admin\PostController@savecategory');
+
+    Route::post('/update-category/{id}', 'Admin\PostController@updatecategory')->name('updatecategory');
+
+    Route::get('/delete-category/{id}', 'Admin\PostController@deletecategory')->name('deletecategory');
 
     Route::get('/users', 'Admin\PageController@adminusers');
 
     Route::get('/orders', 'Admin\PageController@adminorder');
 
     Route::get('/products', 'Admin\PageController@adminproduct');
+
+    Route::get('/archived-products', 'Admin\PageController@archivedproduct');
+
+    Route::post('/save-product', 'Admin\PostController@saveproduct');
+
+    Route::get('/delete-product/{id}', 'Admin\PostController@deleteproduct')->name('deleteproduct');
+
+    Route::get('/activate-product/{id}', 'Admin\PostController@activateproduct')->name('activateproduct');
+
+    Route::get('/deactivate-product/{id}', 'Admin\PostController@deactivateproduct')->name('deactivateproduct');
+
 });

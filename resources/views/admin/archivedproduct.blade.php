@@ -1,6 +1,6 @@
 @extends('layout.app1')
 @section('title')
-Products || Cakeries
+Archived Products || Cakeries
 @endsection
 @section('content')
 
@@ -88,8 +88,8 @@ Products || Cakeries
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-body">
-                        <h4 class="card-title">Product List</h4>
-                        <button class="btn btn-danger btn-sm float-right"><a href="{{ url('/admin/archived-products') }}" class="text-white">Archived Product</a></button>
+                        <h4 class="card-title">Archived Product List</h4>
+                        <button class="btn btn-success btn-sm float-right"><a href="{{ url('/admin/products') }}" class="text-white">Active Product</a></button>
                         <div class="table-responsive m-t-40">
                             <table id="myTable" class="table table-bordered table-striped">
                                 <thead>
@@ -113,8 +113,8 @@ Products || Cakeries
                                         <td>{{ $prod->description }}</td>
                                         <td><img src="../upload/{{ $prod->first()->image }}" alt="" width="50px" height="50px"></td>
                                         <td>
-                                            @if($prod->status == 1 )
-                                            <button class="btn btn-outline-success btn-sm">Active</button>
+                                            @if($prod->status == 0 )
+                                            <button class="btn btn-outline-danger btn-sm">Archived</button>
                                             @endif
                                         </td>
                                         <td>
@@ -123,11 +123,7 @@ Products || Cakeries
                                                     <i class="fa fa-tasks"></i> Action
                                                 </button>
                                                 <div class="dropdown-menu">
-                                                    <a class="dropdown-item" href="#">Edit</a>
-                                                    <div class="dropdown-divider"></div>
-                                                    @if($prod->status == 1 )
-                                                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#deactivate{{ $prod->id }}">Archive</a>
-                                                    @endif
+                                                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#activate{{ $prod->id }}">Activate</a>
                                                     <div class="dropdown-divider"></div>
                                                     <a class="dropdown-item" href="#" data-toggle="modal" data-target="#delete{{ $prod->id }}">Delete</a>
                                                 </div>
@@ -148,26 +144,6 @@ Products || Cakeries
                                                     <div class="modal-footer">
                                                         <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">Close</button>
                                                         <a href="{{ route('deleteproduct',$prod->id) }}" class="btn btn-danger btn-sm waves-effect waves-light">Delete Product</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- /.modal -->
-                                        <!-- modal content -->
-                                        <div id="deactivate{{ $prod->id }}" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
-                                            <div class="modal-dialog">
-                                                <div class="modal-content">
-                                                    <div class="modal-header">
-                                                        <h4 class="modal-title" id="myModalLabel">Archive Product</h4>
-                                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                                                    </div>
-                                                    <div class="modal-body">
-                                                        <h4><strong>Confirm Archive</strong></h4>
-                                                        <p>Are you sure you want to Archive {{ $prod->name }}</p>
-                                                    </div>
-                                                    <div class="modal-footer">
-                                                        <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">Close</button>
-                                                        <a href="{{ route('deactivateproduct',$prod->id) }}" class="btn btn-danger btn-sm waves-effect waves-light">Archive Product</a>
                                                     </div>
                                                 </div>
                                             </div>

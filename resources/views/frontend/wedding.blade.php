@@ -35,7 +35,7 @@ Wedding || Cakeries
                             </div>
                             <div class="cake_text">
                                 <h3>Beautiful Begining</h3>
-                                <a class="pink_btn" href="#">View</a>
+                                <a class="pink_btn" href="{{ url('single-cake-view') }}">View</a>
                             </div>
                         </div>
                     </div>

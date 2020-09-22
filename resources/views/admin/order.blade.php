@@ -58,12 +58,12 @@ Orders || Cakeries
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <td>Tiger Nixon</td>
-                                        <td>Tiger Nixon</td>
-                                        <td>Tiger Nixon</td>
-                                        <td>Tiger Nixon</td>
-                                        <td>Tiger Nixon</td>
+                                    <!-- <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
                                         <td><button class="btn btn-outline-danger btn-sm">? Pending</button></td>
                                         <td>
                                             <div class="dropdown">
@@ -78,7 +78,7 @@ Orders || Cakeries
                                                 </div>
                                             </div>
                                         </td>
-                                    </tr>
+                                    </tr> -->
                                 </tbody>
                             </table>
                         </div>

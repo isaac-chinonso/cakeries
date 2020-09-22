@@ -6343,11 +6343,7 @@ a.mytooltip {
     .sidebar-nav #sidebarnav li.three-column>ul {
         width: 550px
     }
-    .sidebar-nav #sidebarnav li.three-column>ul li {
-        width: 32.5%;
-        vertical-align: top;
-        display: inline-block
-    }
+   
     .sidebar-nav #sidebarnav>li>a.has-arrow:after {
         display: none
     }
