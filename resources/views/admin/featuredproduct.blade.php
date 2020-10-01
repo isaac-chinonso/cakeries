@@ -1,6 +1,6 @@
 @extends('layout.app1')
 @section('title')
-Archived Products || Cakeries
+Featured Products || Cakeries
 @endsection
 @section('content')
 
@@ -88,7 +88,7 @@ Archived Products || Cakeries
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-body">
-                        <h4 class="card-title">Archived Product List</h4>
+                        <h4 class="card-title">Featured Product List</h4>
                         <div class="table-responsive m-t-40">
                             <table id="myTable" class="table table-bordered table-striped">
                                 <thead>
@@ -110,10 +110,10 @@ Archived Products || Cakeries
                                         <td>{{ $prod->category->name }}</td>
                                         <td>{{ $prod->name }}</td>
                                         <td>{{ $prod->description }}</td>
-                                        <td><img src="../upload/{{ $prod->first()->image }}" alt="" width="50px" height="50px"></td>
+                                        <td><img src="../upload/{{ $prod->image->first()->source }}" alt="" width="50px" height="50px"></td>
                                         <td>
-                                            @if($prod->status == 0 )
-                                            <button class="btn btn-outline-danger btn-sm">Archived</button>
+                                            @if($prod->status == 2 )
+                                            <button class="btn btn-outline-info btn-sm">Featured</button>
                                             @endif
                                         </td>
                                         <td>
@@ -122,7 +122,7 @@ Archived Products || Cakeries
                                                     <i class="fa fa-tasks"></i> Action
                                                 </button>
                                                 <div class="dropdown-menu">
-                                                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#activate{{ $prod->id }}">Activate</a>
+                                                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#activate{{ $prod->id }}">Remove From Featured</a>
                                                     <div class="dropdown-divider"></div>
                                                     <a class="dropdown-item" href="#" data-toggle="modal" data-target="#delete{{ $prod->id }}">Delete</a>
                                                 </div>

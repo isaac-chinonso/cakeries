@@ -2054,6 +2054,8 @@ i:before {
     -webkit-transition: all 300ms ease;
     -o-transition: all 300ms ease;
     transition: all 300ms ease;
+    width: 270px;
+    height: 226px;
 }
 
 .cake_feature_item .cake_img:before {
@@ -5691,7 +5693,8 @@ i:before {
 }
 
 .product_details_area .product_d_price .product_img {
-    padding-right: 45px;
+    width: 525px;
+    height: 426px;
 }
 
 .product_details_text h4 {
@@ -5870,51 +5873,20 @@ i:before {
 
 .cart_table_area .table-responsive .table thead tr th {
     border: 1px solid #ebebeb;
-    line-height: 56px;
-    padding: 0px;
+    text-align: center;
     color: #3e606b;
-    font-family: "Playfair Display", serif;
-    font-weight: bold;
-    font-size: 20px;
 }
 
-.cart_table_area .table-responsive .table thead tr th:first-child {
-    width: 246px;
-    padding: 0px 35px;
-}
-
-.cart_table_area .table-responsive .table thead tr th:nth-child(2) {
-    width: 214px;
-    padding: 0px 20px;
-}
-
-.cart_table_area .table-responsive .table thead tr th:nth-child(3) {
-    width: 145px;
-    padding: 0px 20px;
-}
-
-.cart_table_area .table-responsive .table thead tr th:nth-child(4) {
-    width: 230px;
-    padding: 0px 20px;
-}
-
-.cart_table_area .table-responsive .table thead tr th:nth-child(5) {
-    width: 196px;
-    padding: 0px 20px;
-}
 
 .cart_table_area .table-responsive .table tbody tr {
     border-bottom: 1px solid #ebebeb;
 }
 
 .cart_table_area .table-responsive .table tbody tr td {
-    padding: 25px 25px;
     border-right: 1px solid #ebebeb;
-    vertical-align: middle;
     -ms-flex-item-align: center;
     align-self: center;
-    font-size: 16px;
-    font-family: "Open Sans", sans-serif;
+    text-align: center;
     color: #797979;
 }
 

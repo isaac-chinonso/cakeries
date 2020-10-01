@@ -17,8 +17,8 @@ class PageController extends Controller
         $user = Auth::user();
         $data['allusers'] = User::where('role_id', '=', 2)->count();
         $data['allcategory'] = Category::where('status', '=', 1)->count();
-        $data['allproduct'] = Product::where('status', '=', 1)->count();
-        $data['allorder'] = Order::where('status', '=', 1)->count();
+        $data['allproduct'] = Product::where('status', '!=',0)->count();
+        $data['allorder'] = Order::all()->count();
         return view('admin.dashboard', $data);
     }
 
@@ -36,7 +36,8 @@ class PageController extends Controller
 
     public function adminorder()
     {
-        return view('admin.order');
+        $data['allorder'] = Order::all();
+        return view('admin.order', $data);
     }
 
     public function adminproduct()
@@ -52,4 +53,14 @@ class PageController extends Controller
         $data['products'] = Product::where('status', '=', 0)->get();
         return view('admin.archivedproduct', $data);
     }
+
+    public function featuredproduct()
+    {
+        $data['categories'] = Category::all();
+        $data['products'] = Product::where('status', '=', 2)->get();
+        return view('admin.featuredproduct', $data);
+    }
+
+
+    
 }

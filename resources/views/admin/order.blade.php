@@ -38,6 +38,9 @@ Orders || Cakeries
         <!-- ============================================================== -->
         <!-- Start Page Content -->
         <!-- ============================================================== -->
+        @include('include.success')
+        @include('include.warning')
+        @include('include.error')
         <div class="row">
             <div class="col-md-12">
                 <div class="card">
@@ -48,37 +51,97 @@ Orders || Cakeries
                             <table id="myTable" class="table table-bordered table-striped">
                                 <thead>
                                     <tr>
-                                        <th>Fullname</th>
+                                        <th>S/N</th>
+                                        <th>Name</th>
                                         <th>Product</th>
+                                        <th>Occasion</th>
+                                        <th>Others specified</th>
                                         <th>Size</th>
-                                        <th>Shape</th>
-                                        <th>Extra Note</th>
+                                        <th>color</th>
+                                        <th>collection_date</th>
+                                        <th>Additional Note</th>
                                         <th>Status</th>
                                         <th>Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <!-- <tr>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td><button class="btn btn-outline-danger btn-sm">? Pending</button></td>
+                                    <?php $number = 1; ?>
+                                    @foreach($allorder as $order)
+                                    <tr>
+                                        <td>{{ $number }}</td>
+                                        <td>{{ $order->user->profile->first()->fname }} {{ $order->user->profile->first()->lname }}</td>
+                                        <td>{{ $order->product->name }}</td>
+                                        <td>{{ $order->occasion }}</td>
+                                        <td>{{ $order->others }}</td>
+                                        <td>{{ $order->size }}</td>
+                                        <td>{{ $order->color }}</td>
+                                        <td>{{ $order->collection_date }}</td>
+                                        <td>{{ $order->comment }}</td>
+                                        <td>
+                                            @if($order->status == 0 )
+                                            <button class="btn btn-outline-danger btn-sm">Pending</button>
+                                            @elseif($order->status == 1 )
+                                            <button class="btn btn-outline-success btn-sm">Accepted</button>
+                                            @endif
+                                        </td>
                                         <td>
                                             <div class="dropdown">
                                                 <button type="button" class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown">
-                                                    <i class="fa fa-tasks"></i> Action
+                                                     Action
                                                 </button>
                                                 <div class="dropdown-menu">
-                                                    <a class="dropdown-item" href="#">Accept</a>
-                                                    <a class="dropdown-item" href="#">Decline</a>
+                                                    @if($order->status == 0 )
+                                                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#accept{{ $order->id }}">Accept Order</a>
+                                                    @elseif($order->status == 1)
+                                                    @endif
                                                     <div class="dropdown-divider"></div>
-                                                    <a class="dropdown-item" href="#">Delete</a>
+                                                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#delete{{ $order->id }}">Delete Order</a>
                                                 </div>
                                             </div>
                                         </td>
-                                    </tr> -->
+                                        <!-- modal content -->
+                                        <div id="accept{{ $order->id }}" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h4 class="modal-title" id="myModalLabel">Accept Order</h4>
+                                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <h4><strong>Confirm Activation</strong></h4>
+                                                        <p>Are you sure you want to accept order from {{ $order->user->profile->first()->fname }} {{ $order->user->profile->first()->lname }}</p>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">Close</button>
+                                                        <a href="{{ route('acceptorder',$order->id) }}" class="btn btn-success btn-sm waves-effect waves-light">Accept Order</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- /.modal -->
+                                        <!-- modal content -->
+                                        <div id="delete{{ $order->id }}" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h4 class="modal-title" id="myModalLabel">Delete Order</h4>
+                                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <h4><strong>Confirm Deletion</strong></h4>
+                                                        <p>Are you sure you want to Delete this order </p>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">Close</button>
+                                                        <a href="{{ route('deleteorder',$order->id) }}" class="btn btn-danger btn-sm waves-effect waves-light">Delete Order</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- /.modal -->
+                                    </tr>
+                                    <?php $number++; ?>
+                                    @endforeach
                                 </tbody>
                             </table>
                         </div>

@@ -89,7 +89,6 @@ Products || Cakeries
                 <div class="card">
                     <div class="card-body">
                         <h4 class="card-title">Product List</h4>
-                        <button class="btn btn-danger btn-sm float-right"><a href="{{ url('/admin/archived-products') }}" class="text-white">Archived Product</a></button>
                         <div class="table-responsive m-t-40">
                             <table id="myTable" class="table table-bordered table-striped">
                                 <thead>
@@ -111,7 +110,7 @@ Products || Cakeries
                                         <td>{{ $prod->category->name }}</td>
                                         <td>{{ $prod->name }}</td>
                                         <td>{{ $prod->description }}</td>
-                                        <td><img src="../upload/{{ $prod->first()->image }}" alt="" width="50px" height="50px"></td>
+                                        <td><img src="../upload/{{ $prod->image->first()->source }}" title="{{ $prod->name }}" width="50px" height="50px"></td>
                                         <td>
                                             @if($prod->status == 1 )
                                             <button class="btn btn-outline-success btn-sm">Active</button>
@@ -124,6 +123,8 @@ Products || Cakeries
                                                 </button>
                                                 <div class="dropdown-menu">
                                                     <a class="dropdown-item" href="#">Edit</a>
+                                                    <div class="dropdown-divider"></div>
+                                                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#featured{{ $prod->id }}">Set as Featured</a>
                                                     <div class="dropdown-divider"></div>
                                                     @if($prod->status == 1 )
                                                     <a class="dropdown-item" href="#" data-toggle="modal" data-target="#deactivate{{ $prod->id }}">Archive</a>
@@ -188,6 +189,26 @@ Products || Cakeries
                                                     <div class="modal-footer">
                                                         <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">Close</button>
                                                         <a href="{{ route('activateproduct',$prod->id) }}" class="btn btn-success btn-sm waves-effect waves-light">Activate Product</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- /.modal -->
+                                        <!-- modal content -->
+                                        <div id="featured{{ $prod->id }}" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h4 class="modal-title" id="myModalLabel">Set Featured Product</h4>
+                                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <h4><strong>Confirm Action</strong></h4>
+                                                        <p>Are you sure you want to set {{ $prod->name }} as featured product</p>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">Close</button>
+                                                        <a href="{{ route('setfeatured',$prod->id) }}" class="btn btn-success btn-sm waves-effect waves-light">Set as Featured</a>
                                                     </div>
                                                 </div>
                                             </div>

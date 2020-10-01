@@ -9,6 +9,8 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use App\User;
 use App\Profile;
+use App\Mail\Register;
+use Mail;
 
 class UserController extends Controller
 {

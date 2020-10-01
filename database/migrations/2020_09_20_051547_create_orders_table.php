@@ -17,8 +17,11 @@ class CreateOrdersTable extends Migration
             $table->bigIncrements('id');
             $table->bigInteger('user_id')->unsigned();
             $table->Integer('product_id');
+            $table->string('occasion')->nullable();
+            $table->string('others')->nullable();
             $table->string('size')->nullable();
-            $table->string('shape')->nullable();
+            $table->string('color')->nullable();
+            $table->string('collection_date',10)->nullable();
             $table->text('comment')->nullable();
             $table->boolean('status');
             $table->timestamps();

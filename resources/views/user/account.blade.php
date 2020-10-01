@@ -13,6 +13,9 @@ Manage Account || Cakeries
                     <h1 style="font-size: 20px;">Good evening <img src="../assets/img/evening.png">, {{ Auth::user()->profile->first()->fname }}</h1>
                     @endif
         </div>
+        @include('include.success')
+        @include('include.warning')
+        @include('include.error')
         <div class="row product_inner_row">
             <div class="col-lg-9">
                 <div class="order_box_price">
@@ -21,7 +24,7 @@ Manage Account || Cakeries
                             <h3>Manage Account</h3>
                             <hr>
                         </div>
-                        <form class="billing_form row" method="POST">
+                        <form class="billing_form row" method="POST" action="{{ url('/user/update-profile') }}">
                             <div class="form-group col-md-6">
                                 <label>First Name *</label>
                                 <input type="text" class="form-control" name="fname" value="{{ Auth::user()->profile->first()->fname }}">
@@ -36,7 +39,7 @@ Manage Account || Cakeries
                             </div>
                             <div class="form-group col-md-6">
                                 <label>Phone Number *</label>
-                                <input type="phone" class="form-control" name="phone" value="{{ Auth::user()->phone }}">
+                                <input type="phone" class="form-control" name="phone" value="{{ Auth::user()->profile->first()->phone }}">
                             </div>
                             <div class="form-group col-md-6">
                                 <label>City *</label>
@@ -51,16 +54,17 @@ Manage Account || Cakeries
                                 <input type="text" class="form-control" name="postcode" value="{{ Auth::user()->profile->first()->postcode }}">
                             </div>
                             <div class="form-group col-md-6">
-                                <label>Fax</label>
+                                <label>Fax (optional)</label>
                                 <input type="text" class="form-control" name="fax" value="{{ Auth::user()->profile->first()->fax }}">
                             </div>
                             <div class="form-group col-md-12">
                                 <label>Address *</label>
-                                <textarea class="form-control" name="address" placeholder="Enter Street Address"></textarea>
+                                <textarea class="form-control" name="street" placeholder="Enter Street Address">{{ Auth::user()->profile->first()->street }}</textarea>
                             </div>
                             <div class="form-group col-md-12 text-center">
-                                <button class="btn colo">Update Account</button>
+                                <button type="submit" class="btn colo">Update Account</button>
                             </div>
+                            <input type="hidden" name="_token" value="{{ Session::token() }}">
                         </form>
                     </div>
                 </div>

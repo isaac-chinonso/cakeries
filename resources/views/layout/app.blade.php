@@ -107,7 +107,7 @@
             <div class="scroll-sidebar">
                 <!-- Sidebar navigation-->
                 <nav class="sidebar-nav">
-                    <ul>
+                    <ul id="sidebarnav">
                         <li class="nav-small-cap">PERSONAL</li>
                         <li class="{{ request()->is('admin/dashboard*') ? 'active' : '' }}">
                             <a href="{{ url('/admin/dashboard') }}"><i class="mdi mdi-monitor"></i><span class="hide-menu">Dashboard</span></a>
@@ -115,8 +115,13 @@
                         <li class="{{ request()->is('admin/categories*') ? 'active' : '' }}">
                             <a href="{{ url('/admin/categories') }}"><i class="mdi mdi-cards"></i><span class="hide-menu">Categories</span></a>
                         </li>
-                        <li class="{{ request()->is('admin/products*') ? 'active' : '' }}">
-                            <a href="{{ url('/admin/products') }}"><i class="mdi mdi-cake-variant"></i><span class="hide-menu">Products</span></a>
+                        <li class="{{ request()->is('admin/products*') ? 'active' : '' }} {{ request()->is('admin/featured-products*') ? 'active' : '' }} {{ request()->is('admin/archived-products*') ? 'active' : '' }}">
+                            <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-cake-variant"></i><span class="hide-menu">Products</span></a>
+                            <ul aria-expanded="false" class="collapse">
+                                <li><a href="{{ url('/admin/products') }}">Active Product </a></li>
+                                <li><a href="{{ url('/admin/featured-products') }}">Featured Product</a></li>
+                                <li><a href="{{ url('/admin/archived-products') }}">Archived Product</a></li>
+                            </ul>
                         </li>
                         <li class="{{ request()->is('admin/orders*') ? 'active' : '' }}">
                             <a href="{{ url('/admin/orders') }}"><i class="mdi mdi-cart"></i><span class="hide-menu">Orders</span></a>

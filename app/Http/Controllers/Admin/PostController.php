@@ -7,7 +7,7 @@ use App\Http\Controllers\Controller;
 use App\Category;
 use App\Product;
 use App\Image;
-
+use App\Order;
 
 class PostController extends Controller
 {
@@ -76,17 +76,19 @@ class PostController extends Controller
         $product->category_id = $request->input('category_id');
         $product->name = $request->input('name');
         $product->description = $request->input('description');
-        // save image 
-        if ($request->hasFile('image')) {
-            $image = $request->file('image');
-            $filename = time() . '.' . $image->getClientOriginalExtension();
-            $destination = public_path('upload/');
-            $image->move($destination, $filename);
-
-            $product->image = $filename;
-        }
         $product->status = 1;
         $product->save();
+
+        $image = $request['image'];
+        $filename = time() . '.' . $image->getClientOriginalExtension();
+        $destination = public_path('upload/');
+        $image->move($destination, $filename);
+
+        // Save Record into image DB
+        $image = new Image();
+        $image->product_id = $product->id;
+        $image->source = $filename;
+        $image->save();
 
         \Session::flash('Success_message', 'You Have Successfully Added Product');
 
@@ -95,36 +97,69 @@ class PostController extends Controller
 
     public function deleteproduct($id)
     {
-    	// Delete product
-        $product = Product::where('id',$id)->first();
-        $file_path = public_path() . '/upload/' . $product->image;
+        // Delete product
+        $product = Product::where('id', $id)->first();
+        $file_path = public_path() . '/upload/' . $product->image->first()->source ;
         unlink($file_path);
         $product->delete();
-        
-        \Session::flash('Success_message','You Have Successfully Deleted product');
 
-         return back();
+        \Session::flash('Success_message', 'You Have Successfully Deleted product');
+
+        return back();
     }
 
     public function activateproduct($id)
     {
 
-            Product::where(['id'=>$id])
-                ->update(array('status' => 1 ));
+        Product::where(['id' => $id])
+            ->update(array('status' => 1));
 
-            \Session::flash('Success_message','Activation Successfully');
+        \Session::flash('Success_message', 'Activation Successfully');
 
-         return back();
+        return back();
     }
 
     public function deactivateproduct($id)
     {
 
-            Product::where(['id'=>$id])
-                ->update(array('status' => 0));
+        Product::where(['id' => $id])
+            ->update(array('status' => 0));
 
-        \Session::flash('Success_message','Deactivation Successfully');
+        \Session::flash('Success_message', 'Deactivation Successfully');
 
-         return back();
+        return back();
+    }
+
+    public function setfeatured($id)
+    {
+
+        Product::where(['id' => $id])
+            ->update(array('status' => 2));
+
+        \Session::flash('Success_message', 'Product Successfully Set as Featured Product');
+
+        return back();
+    }
+
+    public function acceptorder($id)
+    {
+
+        Order::where(['id' => $id])
+            ->update(array('status' => 1));
+
+        \Session::flash('Success_message', 'Order Accepted Successfully');
+
+        return back();
+    }
+
+    public function deleteorder($id)
+    {
+        // Delete order
+        $order = Order::where('id', $id)->first();
+        $order->delete();
+
+        \Session::flash('Success_message', 'You Have Successfully Deleted Order');
+
+        return back();
     }
 }

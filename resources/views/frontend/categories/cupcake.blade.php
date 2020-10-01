@@ -1,6 +1,6 @@
 @extends('layout.master1')
 @section('title')
-All Cakes || Cakeries
+Cupcakes || Cakeries
 @endsection
 @section('content')
 
@@ -8,10 +8,10 @@ All Cakes || Cakeries
 <section class="banner_area">
     <div class="container">
         <div class="banner_text">
-            <h3>Shop</h3>
+            <h3>Cupcakes</h3>
             <ul>
                 <li><a href="#">Home</a></li>
-                <li><a href="#">Cakes</a></li>
+                <li><a href="#">All Cakes</a></li>
             </ul>
         </div>
     </div>
@@ -24,32 +24,19 @@ All Cakes || Cakeries
         <div class="row product_inner_row">
             <div class="col-lg-9">
                 <div class="p_w_title">
-                    <h3>All Categories</h3>
+                    <small>Shop by Occassion</small><br>
+                    <h3> Cupcakes</h3>
                 </div>
                 <div class="row product_item_inner">
-                    @foreach($product as $prods)
+                    @foreach($productcat as $prodcat)
                     <div class="col-lg-4 col-md-4 col-6">
                         <div class="cake_feature_item">
                             <div class="cake_img">
-                                <img src="../upload/{{ $prods->image->first()->source }}" alt="{{ $prods->name }}">
+                                <img src="../upload/{{ $prodcat->image->first()->source }}" alt="">
                             </div>
                             <div class="cake_text">
-                                <h3>{{ $prods->category->name }}</h3>
-                                @if($prods->category_id == 1)
-                                <a class="pink_btn" href="{{ url('/cake/wedding-cakes') }}">View all</a>
-                                @elseif($prods->category_id == 2)
-                                <a class="pink_btn" href="{{ url('/cake/men-cakes') }}">View all</a>
-                                @elseif($prods->category_id == 3)
-                                <a class="pink_btn" href="{{ url('/cake/specialevent-cakes') }}">View all</a>
-                                @elseif($prods->category_id == 4)
-                                <a class="pink_btn" href="{{ url('/cake/boy-cakes') }}">View all</a>
-                                @elseif($prods->category_id == 5)
-                                <a class="pink_btn" href="{{ url('/cake/cupcake') }}">View all</a>
-                                @elseif($prods->category_id == 6)
-                                <a class="pink_btn" href="{{ url('/cake/girl-cakes') }}">View all</a>
-                                @elseif($prods->category_id == 7)
-                                <a class="pink_btn" href="{{ url('/cake/lady-cakes') }}">View all</a>
-                                @endif
+                                <h3 style="font-size: 16px;font-weight:bolder;">{{ $prodcat->name }}</h3>
+                                <a class="pink_btn" href="{{ route('productdetails',$prodcat->slug) }}">View Product</a>
                             </div>
                         </div>
                     </div>
@@ -66,7 +53,7 @@ All Cakes || Cakeries
                             <li><a href="#">Wedding Cakes (9)</a></li>
                             <li><a href="#">Men Cakes (31)</a></li>
                             <li><a href="#">Special Event Cake (42)</a></li>
-                            <li><a href="#">Boys Cakes (8)</a></li>
+                            <li><a href="#">cupcake/s Cakes (8)</a></li>
                             <li><a href="#">Cupcakes (11)</a></li>
                             <li><a href="#">Girls Cakes (8)</a></li>
                             <li><a href="#">Ladies Cakes (8)</a></li>

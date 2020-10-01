@@ -57,14 +57,20 @@
                         <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                         <li><a href="#"><i class="fa fa-twitter"></i></a></li>
                         <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                        <li class="shop_cart">
+                            <a href="{{ url('/cart') }}" class="dropbtn">
+                                <i class="fa fa-shopping-cart"></i>
+                                @if(request()->session()->has('cart')) ({{request()->session()->get('cart')->totalQuantity}} Item) @elseif (!request()->session()->has('cart')) (0) @endif
+                            </a>
+                        </li>
                     </ul>
                     @else
                     <ul class="h_social1 list_style">
                         <li class="dropdown">
-                            <a class="dropdown-toggle" href="#" data-toggle="dropdown" id="dropdownMenuLink" aria-haspopup="true" aria-expanded="false" style="color: #fff;">My Account</a>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <a class="dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" style="color: #fff;">My Account</a>
+                            <div class="dropdown-menu">
                                 <a href="{{ route('myaccount') }}" class="dropdown-item" style="color: #7b7b7b;">Manage Account</a>
-                                <a href="#" class="dropdown-item" style="color: #7b7b7b;">My Order</a>
+                                <a href="{{ url('/user/my-order') }}" class="dropdown-item" style="color: #7b7b7b;">My Order</a>
                                 <a href="#" class="dropdown-item" style="color: #7b7b7b;">Change Password</a>
                                 <a href="{{ route('logout') }}" class="dropdown-item" style="color: #7b7b7b;">Sign out</a>
                             </div>
@@ -72,6 +78,12 @@
                         <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                         <li><a href="#"><i class="fa fa-twitter"></i></a></li>
                         <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                        <li class="shop_cart">
+                            <a href="{{ url('/cart') }}" class="dropbtn">
+                                <i class="fa fa-shopping-cart"></i>
+                                @if(request()->session()->has('cart')) ({{request()->session()->get('cart')->totalQuantity}} Item) @elseif (!request()->session()->has('cart')) (0) @endif
+                            </a>
+                        </li>
                     </ul>
                     @endif
                 </div>
@@ -97,13 +109,13 @@
                             <li class="dropdown submenu {{ request()->is('cake/allcakes*') ? 'active' : '' }} {{ request()->is('cake/wedding*') ? 'active' : '' }} {{ request()->is('cake/men*') ? 'active' : '' }} {{ request()->is('cake/specialevent*') ? 'active' : '' }} {{ request()->is('cake/boy*') ? 'active' : '' }} {{ request()->is('cake/cupcake*') ? 'active' : '' }} {{ request()->is('cake/girl*') ? 'active' : '' }} {{ request()->is('cake/lady*') ? 'active' : '' }}">
                                 <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Our Cakes</a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="{{ url('/cake/wedding') }}">Wedding Cakes</a></li>
-                                    <li><a href="{{ url('/cake/men') }}">Men's Cake</a></li>
-                                    <li><a href="{{ url('/cake/specialevent') }}">Special Event Cakes</a></li>
-                                    <li><a href="{{ url('/cake/boy') }}">Boy's Cakes</a></li>
+                                <li><a href="{{ url('/cake/wedding-cakes') }}">Wedding Cakes</a></li>
+                                    <li><a href="{{ url('/cake/men-cakes') }}">Men's Cake</a></li>
+                                    <li><a href="{{ url('/cake/specialevent-cakes') }}">Special Event Cakes</a></li>
+                                    <li><a href="{{ url('/cake/boy-cakes') }}">Boy's Cakes</a></li>
                                     <li><a href="{{ url('/cake/cupcake') }}">Cupcakes</a></li>
-                                    <li><a href="{{ url('/cake/girl') }}">Girl's Cakes</a></li>
-                                    <li><a href="{{ url('/cake/lady') }}">Ladies Cake</a></li>
+                                    <li><a href="{{ url('/cake/girl-cakes') }}">Girl's Cakes</a></li>
+                                    <li><a href="{{ url('/cake/lady-cakes') }}">Ladies Cake</a></li>
                                     <li><a href="{{ url('/cake/allcakes') }}">View all</a></li>
                                 </ul>
                             </li>

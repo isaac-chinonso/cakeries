@@ -21,15 +21,21 @@ Single Cake || Cakeries
 <section class="product_details_area p_100">
     <div class="container">
         <div class="row product_d_price">
-            <div class="col-lg-6">
-                <div class="product_img"><img class="img-fluid" src="assets/img/product/big1.jpg" alt=""></div>
+            <div class="col-lg-5">
+                <div class="">
+                    <img class="img-thumbnail product_img" src="../upload/{{ $proddetail->image->first()->source }}" alt="">
+                </div>
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-7">
                 <div class="product_details_text">
-                    <h4>Beautiful Begining</h4>
-                    <p>Cake colours, images and layout are for illustration ONLY. All our cakes are hand finished so the final product may vary. In case you want to change the colours then please add remarks during checkout or call the branch after placing the order.</p>
-                    <h5>Category : Wedding Cake </h5>
-                    <a class="pink_more" href="#">Order Now</a>
+                    <h4>{{ $proddetail->name }}</h4>
+                    <p style="font-size: 14px;">
+                        {{ $proddetail->description }}<br>
+                        <span style="color: red;">Note: </span>
+                        Cake colours, images and layout are for illustration ONLY. All our cakes are hand finished so the final product may vary. In case you want to change the colours then please add remarks during checkout or call us after placing the order.
+                    </p>
+                    <h5>Category : {{ $proddetail->category->name }} </h5>
+                    <a class="btn btn-default btn-block colo" href="{{ route('addtocart',$proddetail->id) }}"><i class="fa fa-shopping-cart"></i> Add to Basket</a>
                 </div>
             </div>
         </div>
@@ -44,54 +50,19 @@ Single Cake || Cakeries
             <h2>Similar Products</h2>
         </div>
         <div class="row similar_product_inner">
+            @foreach($similarprod as $simprod)
             <div class="col-lg-3 col-md-4 col-6">
                 <div class="cake_feature_item">
                     <div class="cake_img">
-                        <img src="assets/img/cake-feature/wedding.jpg" alt="">
+                        <img src="../upload/{{ $simprod->image->first()->source }}" alt="">
                     </div>
                     <div class="cake_text">
-                        <h4>$29</h4>
-                        <h3>Strawberry Cupcakes</h3>
-                        <a class="pest_btn" href="#">Add to cart</a>
+                        <h3 style="font-size: 16px;font-weight:bolder;">{{ $simprod->name }}</h3>
+                        <a class="pest_btn" href="#">View Cake</a>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-4 col-6">
-                <div class="cake_feature_item">
-                    <div class="cake_img">
-                        <img src="assets/img/cake-feature/special.jpg" alt="">
-                    </div>
-                    <div class="cake_text">
-                        <h4>$29</h4>
-                        <h3>Strawberry Cupcakes</h3>
-                        <a class="pest_btn" href="#">Add to cart</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-6">
-                <div class="cake_feature_item">
-                    <div class="cake_img">
-                        <img src="assets/img/cake-feature/men.jpg" alt="">
-                    </div>
-                    <div class="cake_text">
-                        <h4>$29</h4>
-                        <h3>Strawberry Cupcakes</h3>
-                        <a class="pest_btn" href="#">Add to cart</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-6">
-                <div class="cake_feature_item">
-                    <div class="cake_img">
-                        <img src="assets/img/cake-feature/boys.jpg" alt="">
-                    </div>
-                    <div class="cake_text">
-                        <h4>$29</h4>
-                        <h3>Strawberry Cupcakes</h3>
-                        <a class="pest_btn" href="#">Add to cart</a>
-                    </div>
-                </div>
-            </div>
+            @endforeach
         </div>
     </div>
 </section>
