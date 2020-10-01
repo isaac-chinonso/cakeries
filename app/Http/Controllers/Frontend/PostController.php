@@ -38,7 +38,7 @@ class PostController extends Controller
             'size' => 'required',
             'color' => 'required',
             'collection_date' => 'required',
-            'comment' => 'required',
+            'collection_type' => 'required',
         ]);
 
         // Save Record into Order DB
@@ -52,6 +52,7 @@ class PostController extends Controller
             $order->size = $request->input('size');
             $order->color = $request->input('color');
             $order->collection_date = $request->input('collection_date');
+            $order->collection_type = $request->input('collection_type');
             $order->comment = $request->input('comment');
             $order->status = 0;
             if (Auth::user()->profile->first()->phone == NULL) {

@@ -54,9 +54,17 @@ Manage Account || Cakeries
                                 <label>Color</label>
                                 <input type="text" class="form-control" name="color" placeholder="Please Enter Cake Color" value="{{ Request::old('color')}}">
                             </div>
-                            <div class="form-group col-md-12">
+                            <div class="form-group col-md-6">
                                 <label>Collection Date *</label>
                                 <input type="date" class="form-control" name="collection_date" value="{{ Request::old('collection_date')}}">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label>Collection Type *</label>
+                                <select class="form-control" name="collection_type">
+                                    <option selected disabled>Select Collection Type</option>
+                                    <option value="Delivery">Delivery</option>
+                                    <option value="Pick up">Pickup</option>
+                                </select>
                             </div>
                             <div class="form-group col-md-12">
                                 <label>Additional Note </label>

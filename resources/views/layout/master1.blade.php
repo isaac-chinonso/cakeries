@@ -119,7 +119,7 @@
                                     <li><a href="{{ url('/cake/allcakes') }}">View all</a></li>
                                 </ul>
                             </li>
-                            <li><a href="#">Flavour</a></li>
+                            <li class="{{ request()->is('flavours-and-fillings*') ? 'active' : '' }}"><a href="{{ url('/flavours-and-fillings') }}">Flavour</a></li>
                             <li class="{{ request()->is('testimonials*') ? 'active' : '' }}"><a href="{{ url('/testimonials') }}">Testimonials</a></li>
                             <li class="{{ request()->is('contact*') ? 'active' : '' }}"><a href="{{ url('/contact') }}">Contact Us</a></li>
                         </ul>

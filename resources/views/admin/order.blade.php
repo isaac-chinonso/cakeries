@@ -59,6 +59,7 @@ Orders || Cakeries
                                         <th>Size</th>
                                         <th>color</th>
                                         <th>collection_date</th>
+                                        <th>collection_Type</th>
                                         <th>Additional Note</th>
                                         <th>Status</th>
                                         <th>Action</th>
@@ -76,6 +77,7 @@ Orders || Cakeries
                                         <td>{{ $order->size }}</td>
                                         <td>{{ $order->color }}</td>
                                         <td>{{ $order->collection_date }}</td>
+                                        <td>{{ $order->collection_type }}</td>
                                         <td>{{ $order->comment }}</td>
                                         <td>
                                             @if($order->status == 0 )

@@ -5,7 +5,7 @@ Contact || Cakeries
 @section('content')
 
 <!--================End Main Header Area =================-->
-<section class="banner_area">
+<section class="banner_area p_20">
     <div class="container">
         <div class="banner_text">
             <h3>Contact Us</h3>

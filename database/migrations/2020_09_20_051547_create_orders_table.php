@@ -22,6 +22,7 @@ class CreateOrdersTable extends Migration
             $table->string('size')->nullable();
             $table->string('color')->nullable();
             $table->string('collection_date',10)->nullable();
+            $table->string('collection_type')->nullable();
             $table->text('comment')->nullable();
             $table->boolean('status');
             $table->timestamps();

@@ -17,6 +17,8 @@ Route::get('/about', 'Frontend\PageController@about');
 
 Route::get('/testimonials', 'Frontend\PageController@testimonial');
 
+Route::get('/flavours-and-fillings', 'Frontend\PageController@flavour');
+
 Route::get('/contact', 'Frontend\PageController@contact');
 
 Route::get('/product-details/{id}/{slug?}', 'Frontend\PageController@productdetails')->name('productdetails')->where('slug', '[\w\d\-\_]+');

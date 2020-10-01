@@ -85,6 +85,11 @@ class PageController extends Controller
         return view('frontend.testimonial');
     }
 
+    public function flavour()
+    {
+        return view('frontend.flavour');
+    }
+
     public function contact()
     {
         return view('frontend.contact');

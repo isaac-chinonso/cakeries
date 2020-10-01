@@ -37,6 +37,7 @@ Manage Account || Cakeries
                                                 <th>Size</th>
                                                 <th>Color</th>
                                                 <th>Collection Date</th>
+                                                <th>Collection Type</th>
                                                 <th>Additional Note</th>
                                                 <th>Status</th>
                                             </tr>
@@ -54,6 +55,7 @@ Manage Account || Cakeries
                                                 <td>{{ $ord->size }}</td>
                                                 <td>{{ $ord->color }}</td>
                                                 <td>{{ $ord->collection_date }}</td>
+                                                <td>{{ $ord->collection_type }}</td>
                                                 <td>{{ $ord->comment }}</td>
                                                 <td>
                                                     @if($ord->status == 0)

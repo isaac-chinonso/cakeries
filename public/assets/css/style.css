@@ -114,6 +114,10 @@ header .bg {
     padding: 100px 0px;
 }
 
+.p_20 {
+    padding: 20px 0px;
+}
+
 iframe {
     border: none;
 }
