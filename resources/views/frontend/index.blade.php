@@ -14,9 +14,15 @@ Homepage || Cakeries
                 <!-- LAYER NR. 1 -->
                 <div class="slider_text_box">
                     <img src="assets/img/home-slider/slider-18.jpg" alt="" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="5" class="rev-slidebg" data-no-retina>
+<<<<<<< HEAD
                     <div class="tp-caption tp-resizeme first_text" data-x="['right','right','left','15','15','15']" data-hoffset="['-150','0','15','15','15','0']" data-y="['top','top','top','top']" data-voffset="['120','170','70','70','115','170']" data-fontsize="['55','40','55','35','25']" data-lineheight="['76','66','66','40','40']" data-width="['620','640','620','680','350']" data-height="none" data-whitespace="normal" data-type="text" data-responsive_offset="on" data-frames="[{&quot;delay&quot;:10,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;&quot;,&quot;mask&quot;:&quot;x:0px;y:0px;s:inherit;e:inherit;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;y:[175%];&quot;,&quot;mask&quot;:&quot;x:inherit;y:inherit;s:inherit;e:inherit;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;}]" data-textAlign="['left','left','left','left']">Beautifully Customized Cakes to make your Events even more Memorable!</div>
 
                     <div class="tp-caption tp-resizeme slider_button" data-x="['right','right','left','15','15','15']" data-hoffset="['0','0','15','0','0','0']" data-y="['top','top','top','top']" data-voffset="['55','405','415','255','350','325']" data-fontsize="['14','14','14','14']" data-lineheight="['46','46','46','46']" data-width="['620','640','620','620','300']" data-height="none" data-whitespace="normal" data-type="text" data-responsive_offset="on" data-frames="[{&quot;delay&quot;:10,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;&quot;,&quot;mask&quot;:&quot;x:0px;y:[100%];s:inherit;e:inherit;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;y:[175%];&quot;,&quot;mask&quot;:&quot;x:inherit;y:inherit;s:inherit;e:inherit;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;}]">
+=======
+                    <div class="tp-caption tp-resizeme first_text" data-x="['right','right','left','15','15','15']" data-hoffset="['-150','0','15','15','15','0']" data-y="['top','top','top','top']" data-voffset="['120','120','70','70','115','130']" data-fontsize="['55','55','55','35','25']" data-lineheight="['76','66','66','40','40']" data-width="['620','640','620','680','350']" data-height="none" data-whitespace="normal" data-type="text" data-responsive_offset="on" data-frames="[{&quot;delay&quot;:10,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;&quot;,&quot;mask&quot;:&quot;x:0px;y:0px;s:inherit;e:inherit;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;y:[175%];&quot;,&quot;mask&quot;:&quot;x:inherit;y:inherit;s:inherit;e:inherit;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;}]" data-textAlign="['left','left','left','left']" style="font-family: 'Chilanka', cursive;font-size:15px;">Beautifully Customized Cakes to make your Events even more Memorable!</div>
+
+                    <div class="tp-caption tp-resizeme slider_button" data-x="['right','right','left','15','15','15']" data-hoffset="['0','0','15','0','0','0']" data-y="['top','top','top','top']" data-voffset="['355','415','415','255','350','365']" data-fontsize="['14','14','14','14']" data-lineheight="['46','46','46','46']" data-width="['620','640','620','620','300']" data-height="none" data-whitespace="normal" data-type="text" data-responsive_offset="on" data-frames="[{&quot;delay&quot;:10,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;&quot;,&quot;mask&quot;:&quot;x:0px;y:[100%];s:inherit;e:inherit;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;y:[175%];&quot;,&quot;mask&quot;:&quot;x:inherit;y:inherit;s:inherit;e:inherit;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;}]">
+>>>>>>> 77078cc7ac9e761d2a0be84f29240d41d2685202
                         <a class="pink_btn" href="#">Contact us</a>
                     </div>
                 </div>
@@ -105,7 +111,11 @@ Homepage || Cakeries
                             <a href="#">
                                 <h4>Birthday Cakes</h4>
                             </a>
+<<<<<<< HEAD
                             <p>‘’Celebrating birthdays without a cake is simply just a meeting’’. Birthdays are worth celebrating.</p>
+=======
+                            <p>"Celebrating birthdays without a cake is simply just a meeting". Birthdays are worth celebrating.</p>
+>>>>>>> 77078cc7ac9e761d2a0be84f29240d41d2685202
                         </div>
                     </div>
                 </div>
@@ -120,7 +130,11 @@ Homepage || Cakeries
                             <a href="#">
                                 <h4>Tasty Cupcakes</h4>
                             </a>
+<<<<<<< HEAD
                             <p>Our scrumptious cupcakes are designed to be single serving, it is made of any flavour of your choice</p>
+=======
+                            <p>We are delighted to be part of your plan. We are happy to make your special day great!</p>
+>>>>>>> 77078cc7ac9e761d2a0be84f29240d41d2685202
                         </div>
                     </div>
                 </div>
@@ -135,7 +149,11 @@ Homepage || Cakeries
                             <a href="#">
                                 <h4>Wedding Cakes</h4>
                             </a>
+<<<<<<< HEAD
                             <p>Congratulations on your upcoming wedding! We are happy to make your special day great!</p>
+=======
+                            <p>We are delighted to be part of your plan. We are happy to make your special day great!</p>
+>>>>>>> 77078cc7ac9e761d2a0be84f29240d41d2685202
                         </div>
                     </div>
                 </div>
@@ -148,9 +166,15 @@ Homepage || Cakeries
                         </div>
                         <div class="media-body">
                             <a href="#">
+<<<<<<< HEAD
                                 <h4>Awesome Flavours</h4>
                             </a>
                             <p>Giving our customers different flavour is good, but taking their breath away with very unique cake flavours is the delight</p>
+=======
+                                <h4>Awesome Recipes</h4>
+                            </a>
+                            <p>We are delighted to be part of your plan. We are happy to make your special day great!</p>
+>>>>>>> 77078cc7ac9e761d2a0be84f29240d41d2685202
                         </div>
                     </div>
                 </div>
@@ -165,7 +189,11 @@ Homepage || Cakeries
                             <a href="#">
                                 <h4>Special Events</h4>
                             </a>
+<<<<<<< HEAD
                             <p>There are certain events in anyone’s life time that may only occur once, Special event cakes are designed for a special occasion</p>
+=======
+                            <p>There are certain events in anyone’s life time that may only occur once and are very special</p>
+>>>>>>> 77078cc7ac9e761d2a0be84f29240d41d2685202
                         </div>
                     </div>
                 </div>
@@ -180,7 +208,11 @@ Homepage || Cakeries
                             <a href="#">
                                 <h4>Home Delivery</h4>
                             </a>
+<<<<<<< HEAD
                             <p>You can choose to have your cake delivered or collect it from us. All cakes are delivered properly packaged.</p>
+=======
+                            <p>We are delighted to be part of your plan. We are happy to make your special day great!</p>
+>>>>>>> 77078cc7ac9e761d2a0be84f29240d41d2685202
                         </div>
                     </div>
                 </div>

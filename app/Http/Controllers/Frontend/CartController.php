@@ -18,7 +18,11 @@ class CartController extends Controller
 
         request()->session()->put('cart', $cart);
 
+<<<<<<< HEAD
         return redirect()->intended(route('cart'));
+=======
+        return back();
+>>>>>>> 77078cc7ac9e761d2a0be84f29240d41d2685202
     }
 
     public function cart()

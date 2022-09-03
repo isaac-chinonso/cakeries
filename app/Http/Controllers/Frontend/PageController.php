@@ -35,43 +35,71 @@ class PageController extends Controller
 
     public function wedding()
     {
+<<<<<<< HEAD
         $data['productcat'] = Product::where('category_id', 1)->where('status', '!=',0)->inRandomOrder()->simplePaginate(12);
+=======
+        $data['productcat'] = Product::where('category_id', 1)->where('status', '!=',0)->inRandomOrder()->limit(20)->get();
+>>>>>>> 77078cc7ac9e761d2a0be84f29240d41d2685202
         return view('frontend.categories.wedding', $data);
     }
 
     public function men()
     {
+<<<<<<< HEAD
         $data['productcat'] = Product::where('category_id', 2)->where('status', '!=',0)->inRandomOrder()->simplePaginate(12);
+=======
+        $data['productcat'] = Product::where('category_id', 2)->where('status', '!=',0)->inRandomOrder()->limit(20)->get();
+>>>>>>> 77078cc7ac9e761d2a0be84f29240d41d2685202
         return view('frontend.categories.men', $data);
     }
 
     public function specialevent()
     {
+<<<<<<< HEAD
         $data['productcat'] = Product::where('category_id', 3)->where('status', '!=',0)->inRandomOrder()->simplePaginate(12);
+=======
+        $data['productcat'] = Product::where('category_id', 3)->where('status', '!=',0)->inRandomOrder()->limit(20)->get();
+>>>>>>> 77078cc7ac9e761d2a0be84f29240d41d2685202
         return view('frontend.categories.specialevent', $data);
     }
 
     public function boy()
     {
+<<<<<<< HEAD
         $data['productcat'] = Product::where('category_id', 4)->where('status', '!=',0)->inRandomOrder()->simplePaginate(12);
+=======
+        $data['productcat'] = Product::where('category_id', 4)->where('status', '!=',0)->inRandomOrder()->limit(20)->get();
+>>>>>>> 77078cc7ac9e761d2a0be84f29240d41d2685202
         return view('frontend.categories.boy', $data);
     }
 
     public function cupcake()
     {
+<<<<<<< HEAD
         $data['productcat'] = Product::where('category_id', 5)->where('status', '!=',0)->inRandomOrder()->simplePaginate(12);
+=======
+        $data['productcat'] = Product::where('category_id', 5)->where('status', '!=',0)->inRandomOrder()->limit(20)->get();
+>>>>>>> 77078cc7ac9e761d2a0be84f29240d41d2685202
         return view('frontend.categories.cupcake', $data);
     }
 
     public function girl()
     {
+<<<<<<< HEAD
         $data['productcat'] = Product::where('category_id', 6)->where('status', '!=',0)->inRandomOrder()->simplePaginate(12);
+=======
+        $data['productcat'] = Product::where('category_id', 6)->where('status', '!=',0)->inRandomOrder()->limit(20)->get();
+>>>>>>> 77078cc7ac9e761d2a0be84f29240d41d2685202
         return view('frontend.categories.girl', $data);
     }
 
     public function lady()
     {
+<<<<<<< HEAD
         $data['productcat'] = Product::where('category_id', 7)->where('status', '!=',0)->inRandomOrder()->simplePaginate(12);
+=======
+        $data['productcat'] = Product::where('category_id', 7)->where('status', '!=',0)->inRandomOrder()->limit(20)->get();
+>>>>>>> 77078cc7ac9e761d2a0be84f29240d41d2685202
         return view('frontend.categories.lady', $data);
     }
 
@@ -90,11 +118,14 @@ class PageController extends Controller
         return view('frontend.flavour');
     }
 
+<<<<<<< HEAD
     public function terms()
     {
         return view('frontend.terms');
     }
 
+=======
+>>>>>>> 77078cc7ac9e761d2a0be84f29240d41d2685202
     public function contact()
     {
         return view('frontend.contact');

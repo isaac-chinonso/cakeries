@@ -49,7 +49,11 @@ Contact || Cakeries
                 <div class="contact_details">
                     <div class="contact_d_item">
                         <h3>Address :</h3>
+<<<<<<< HEAD
                         <p style="font-size: 14px;text-align: justify;">Bowling Green Row London</p><br>
+=======
+                        <p style="font-size: 14px;text-align: justify;">Bowling Green Row Greenwich London</p><br>
+>>>>>>> 77078cc7ac9e761d2a0be84f29240d41d2685202
                         <h3>Phone :</h3>
                         <p style="font-size: 14px;text-align: justify;">07956798250</p><br>
                         <h3>Email</h3>

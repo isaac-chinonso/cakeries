@@ -1,6 +1,10 @@
 @extends('layout.master1')
 @section('title')
+<<<<<<< HEAD
 Manage Orders || Cakeries
+=======
+Manage Account || Cakeries
+>>>>>>> 77078cc7ac9e761d2a0be84f29240d41d2685202
 @endsection
 @section('content')
 
@@ -33,10 +37,16 @@ Manage Orders || Cakeries
                                                 <th>preview</th>
                                                 <th>Product</th>
                                                 <th>Occasion</th>
+<<<<<<< HEAD
                                                 <th>Size</th>
                                                 <th>Color</th>
                                                 <th>Flavour</th>
                                                 <th>Fillings</th>
+=======
+                                                <th>Others(if specified)</th>
+                                                <th>Size</th>
+                                                <th>Color</th>
+>>>>>>> 77078cc7ac9e761d2a0be84f29240d41d2685202
                                                 <th>Collection Date</th>
                                                 <th>Collection Type</th>
                                                 <th>Additional Note</th>
@@ -44,11 +54,14 @@ Manage Orders || Cakeries
                                             </tr>
                                         </thead>
                                         <tbody>
+<<<<<<< HEAD
                                             @if($order->isEmpty())
                                             <tr>
                                                 <td colspan="11">No Order Available</td>
                                             </tr>
                                             @else
+=======
+>>>>>>> 77078cc7ac9e761d2a0be84f29240d41d2685202
 
                                             @foreach($order as $ord)
                                             <tr>
@@ -56,6 +69,7 @@ Manage Orders || Cakeries
                                                     <img class="img-thumbnail" src="../upload/{{ $ord->product->image->first()->source }}" width="70px" height="60px">
                                                 </td>
                                                 <td>{{ $ord->product->name }}</td>
+<<<<<<< HEAD
                                                 @if($ord->occasion != 'other')
                                                 <td>{{ $ord->occasion }}</td>
                                                 @elseif($ord->occasion == 'other')
@@ -77,6 +91,12 @@ Manage Orders || Cakeries
                                                 @elseif($ord->filling == 'other')
                                                 <td>{{ $ord->other_filling }}</td>
                                                 @endif
+=======
+                                                <td>{{ $ord->occasion }}</td>
+                                                <td>{{ $ord->others }}</td>
+                                                <td>{{ $ord->size }}</td>
+                                                <td>{{ $ord->color }}</td>
+>>>>>>> 77078cc7ac9e761d2a0be84f29240d41d2685202
                                                 <td>{{ $ord->collection_date }}</td>
                                                 <td>{{ $ord->collection_type }}</td>
                                                 <td>{{ $ord->comment }}</td>
@@ -89,8 +109,11 @@ Manage Orders || Cakeries
                                                 </td>
                                             </tr>
                                             @endforeach
+<<<<<<< HEAD
                                             @endif
 
+=======
+>>>>>>> 77078cc7ac9e761d2a0be84f29240d41d2685202
                                         </tbody>
                                     </table>
                                 </div>

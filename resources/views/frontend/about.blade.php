@@ -50,6 +50,7 @@ About || Cakeries
                             <h3>Shop by Occasion</h3>
                         </div>
                         <ul class="list_style">
+<<<<<<< HEAD
                             <li><a href="{{ url('/cake/wedding-cakes') }}">Wedding Cakes<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
                             <li><a href="{{ url('/cake/men-cakes') }}">Men's Cake<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
                             <li><a href="{{ url('/cake/specialevent-cakes') }}">Special Event Cakes<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
@@ -57,6 +58,15 @@ About || Cakeries
                             <li><a href="{{ url('/cake/cupcake') }}">Cupcakes<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
                             <li><a href="{{ url('/cake/girl-cakes') }}">Girl's Cakes<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
                             <li><a href="{{ url('/cake/lady-cakes') }}">Ladies Cake<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+=======
+                            <li><a href="#">Wedding Cakes<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+                            <li><a href="#">Men's Cake<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+                            <li><a href="#">Special Event Cakes<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+                            <li><a href="#">Boy's Cake<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+                            <li><a href="#">Cupcakes<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+                            <li><a href="#">Girls Cake<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+                            <li><a href="#">Ladies Cake<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+>>>>>>> 77078cc7ac9e761d2a0be84f29240d41d2685202
                         </ul>
                     </aside>
                 </div>

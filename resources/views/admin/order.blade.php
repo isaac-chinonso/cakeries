@@ -53,6 +53,7 @@ Orders || Cakeries
                                     <tr>
                                         <th>S/N</th>
                                         <th>Name</th>
+<<<<<<< HEAD
                                         <th>Contact</th>
                                         <th>Product</th>
                                         <th>Occasion</th>
@@ -61,6 +62,15 @@ Orders || Cakeries
                                         <th>Flavour</th>
                                         <th>Fillings</th>
                                         <th>collection</th>
+=======
+                                        <th>Product</th>
+                                        <th>Occasion</th>
+                                        <th>Others specified</th>
+                                        <th>Size</th>
+                                        <th>color</th>
+                                        <th>collection_date</th>
+                                        <th>collection_Type</th>
+>>>>>>> 77078cc7ac9e761d2a0be84f29240d41d2685202
                                         <th>Additional Note</th>
                                         <th>Status</th>
                                         <th>Action</th>
@@ -72,6 +82,7 @@ Orders || Cakeries
                                     <tr>
                                         <td>{{ $number }}</td>
                                         <td>{{ $order->user->profile->first()->fname }} {{ $order->user->profile->first()->lname }}</td>
+<<<<<<< HEAD
                                         <td>{{ $order->user->email }} <br> {{ $order->user->profile->first()->phone }}</td>
                                         <td>{{ $order->product->name }}</td>
                                         @if($order->occasion != 'other')
@@ -96,6 +107,15 @@ Orders || Cakeries
                                         <td>{{ $order->other_filling }}</td>
                                         @endif
                                         <td>{{ $order->collection_date }} <br> {{ $order->collection_type }}</td>
+=======
+                                        <td>{{ $order->product->name }}</td>
+                                        <td>{{ $order->occasion }}</td>
+                                        <td>{{ $order->others }}</td>
+                                        <td>{{ $order->size }}</td>
+                                        <td>{{ $order->color }}</td>
+                                        <td>{{ $order->collection_date }}</td>
+                                        <td>{{ $order->collection_type }}</td>
+>>>>>>> 77078cc7ac9e761d2a0be84f29240d41d2685202
                                         <td>{{ $order->comment }}</td>
                                         <td>
                                             @if($order->status == 0 )
@@ -107,7 +127,11 @@ Orders || Cakeries
                                         <td>
                                             <div class="dropdown">
                                                 <button type="button" class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown">
+<<<<<<< HEAD
                                                     Action
+=======
+                                                     Action
+>>>>>>> 77078cc7ac9e761d2a0be84f29240d41d2685202
                                                 </button>
                                                 <div class="dropdown-menu">
                                                     @if($order->status == 0 )

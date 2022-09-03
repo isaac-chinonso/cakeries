@@ -120,17 +120,26 @@
                                 <li><a href="{{ url('/admin/archived-products') }}">Archived Product</a></li>
                             </ul>
                         </li>
+<<<<<<< HEAD
                         <li class="{{ request()->is('admin/orders*') ? 'active' : '' }} {{ request()->is('admin/wedding-orders*') ? 'active' : '' }}">
                             <a class="has-arrow waves-effect waves-dark" href="#"><i class="mdi mdi-cart"></i><span class="hide-menu">Orders</span></a>
                             <ul aria-expanded="false" class="collapse">
                                 <li><a href="{{ url('/admin/wedding-orders') }}">Wedding Orders</a></li>
                                 <li><a href="{{ url('/admin/orders') }}">Others </a></li>
                             </ul>
+=======
+                        <li class="{{ request()->is('admin/orders*') ? 'active' : '' }}">
+                            <a href="{{ url('/admin/orders') }}"><i class="mdi mdi-cart"></i><span class="hide-menu">Orders</span></a>
+>>>>>>> 77078cc7ac9e761d2a0be84f29240d41d2685202
                         </li>
                         <li class="{{ request()->is('admin/users*') ? 'active' : '' }}">
                             <a href="{{ url('/admin/users') }}"><i class="mdi mdi-account-multiple"></i><span class="hide-menu">Users</span></a>
                         </li>
+<<<<<<< HEAD
 
+=======
+                       
+>>>>>>> 77078cc7ac9e761d2a0be84f29240d41d2685202
                     </ul>
                 </nav>
                 <!-- End Sidebar navigation -->

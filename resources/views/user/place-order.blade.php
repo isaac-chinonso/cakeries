@@ -21,7 +21,11 @@ Manage Account || Cakeries
                 <div class="order_box_price">
                     <div class="payment_list">
                         <div class="p_w_title">
+<<<<<<< HEAD
                             <h3>Order Form</h3>
+=======
+                            <h3>Order Details</h3>
+>>>>>>> 77078cc7ac9e761d2a0be84f29240d41d2685202
                             <hr>
                         </div>
                         <form class="billing_form row" method="POST" action="{{ url('/user/save-order') }}">
@@ -32,11 +36,16 @@ Manage Account || Cakeries
                                     <option value="Wedding">Wedding</option>
                                     <option value="Birthday">Birthday</option>
                                     <option value="Anniversary">Anniversary</option>
+<<<<<<< HEAD
                                     <option value="other">Others</option>
+=======
+                                    <option value="Others">Others</option>
+>>>>>>> 77078cc7ac9e761d2a0be84f29240d41d2685202
                                 </select>
                             </div>
                             <div class="form-group col-md-6">
                                 <label>If others Specify </label>
+<<<<<<< HEAD
                                 <input type="text" class="form-control" name="other_occasion" value="{{ Request::old('other_occasion')}}">
                             </div>
                             @foreach($products->items as $product)
@@ -52,10 +61,15 @@ Manage Account || Cakeries
                                 </select>
                             </div>
                             @elseif ($product['item']['category_id'] !== 5)
+=======
+                                <input type="text" class="form-control" name="others" value="{{ Request::old('others')}}">
+                            </div>
+>>>>>>> 77078cc7ac9e761d2a0be84f29240d41d2685202
                             <div class="form-group col-md-6">
                                 <label>Size *</label>
                                 <select class="form-control" name="size">
                                     <option selected disabled>Select Cake Size</option>
+<<<<<<< HEAD
                                     <option value="6">6</option>
                                     <option value="8">8</option>
                                     <option value="10">10</option>
@@ -70,10 +84,21 @@ Manage Account || Cakeries
                                 <input type="text" class="form-control" name="other_size" value="{{ Request::old('other_size')}}">
                             </div>
                             <div class="form-group col-md-12">
+=======
+                                    <option value="8 (10-15 portion)">8" (10-15 portion)</option>
+                                    <option value="10 (15-20 portion)">10" (15-20 portion)</option>
+                                    <option value="12 (20-30 portion)">12" (20-30 portion)</option>
+                                    <option value="14 (30-40 portion)">14" (30-40 portion)</option>
+                                    <option value="16 (50-60 portion)">16" (50-60 portion)</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-md-6">
+>>>>>>> 77078cc7ac9e761d2a0be84f29240d41d2685202
                                 <label>Color</label>
                                 <input type="text" class="form-control" name="color" placeholder="Please Enter Cake Color" value="{{ Request::old('color')}}">
                             </div>
                             <div class="form-group col-md-6">
+<<<<<<< HEAD
                                 <label>Flavour *</label>
                                 <select class="form-control" name="flavour">
                                     <option selected disabled>Select Cake Flavour </option>
@@ -119,6 +144,8 @@ Manage Account || Cakeries
                                 <input type="text" class="form-control" name="other_filling" value="{{ Request::old('other_filling')}}">
                             </div>
                             <div class="form-group col-md-6">
+=======
+>>>>>>> 77078cc7ac9e761d2a0be84f29240d41d2685202
                                 <label>Collection Date *</label>
                                 <input type="date" class="form-control" name="collection_date" value="{{ Request::old('collection_date')}}">
                             </div>

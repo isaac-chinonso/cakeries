@@ -82,7 +82,10 @@ return [
             'secret' => env('AWS_SECRET_ACCESS_KEY'),
             'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
             'table' => env('DYNAMODB_CACHE_TABLE', 'cache'),
+<<<<<<< HEAD
             'endpoint' => env('DYNAMODB_ENDPOINT'),
+=======
+>>>>>>> 77078cc7ac9e761d2a0be84f29240d41d2685202
         ],
 
     ],

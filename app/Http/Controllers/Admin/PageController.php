@@ -7,7 +7,10 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use App\User;
 use App\Category;
+<<<<<<< HEAD
 use App\Contact;
+=======
+>>>>>>> 77078cc7ac9e761d2a0be84f29240d41d2685202
 use App\Product;
 use App\Order;
 
@@ -41,12 +44,15 @@ class PageController extends Controller
         return view('admin.order', $data);
     }
 
+<<<<<<< HEAD
     public function admincontact()
     {
         $data['allwedding'] = Contact::all();
         return view('admin.wedding_order', $data);
     }
 
+=======
+>>>>>>> 77078cc7ac9e761d2a0be84f29240d41d2685202
     public function adminproduct()
     {
         $data['categories'] = Category::all();

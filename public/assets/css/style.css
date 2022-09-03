@@ -5696,11 +5696,17 @@ i:before {
     margin-bottom: 80px;
 }
 
+<<<<<<< HEAD
 @media (min-width: 992px) {
     .product_details_area .product_d_price .product_img {
         width: 525px;
         height: 400px;
     }
+=======
+.product_details_area .product_d_price .product_img {
+    width: 525px;
+    height: 426px;
+>>>>>>> 77078cc7ac9e761d2a0be84f29240d41d2685202
 }
 
 .product_details_text h4 {

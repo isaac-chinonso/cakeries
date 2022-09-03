@@ -7,7 +7,11 @@ Register || Cakeries
 <section class="product_area p_100 billing_details_area">
     <div class="container">
         <div class="return_option">
+<<<<<<< HEAD
             <h4>Returning customer? <a href="{{ url('/login') }}">Click here to login</a></h4>
+=======
+            <h4>Returning customer? <a href="{{ url('/signin') }}">Click here to login</a></h4>
+>>>>>>> 77078cc7ac9e761d2a0be84f29240d41d2685202
         </div>
         @include('include.success')
         @include('include.warning')

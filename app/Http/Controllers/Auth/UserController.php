@@ -9,8 +9,12 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use App\User;
 use App\Profile;
+<<<<<<< HEAD
 use App\Mail\UserRegistration;
 use App\Mail\UserWelcome;
+=======
+use App\Mail\Register;
+>>>>>>> 77078cc7ac9e761d2a0be84f29240d41d2685202
 use Mail;
 
 class UserController extends Controller
@@ -88,6 +92,7 @@ class UserController extends Controller
 
         $user = Auth::user();
 
+<<<<<<< HEAD
         $this->email = ['enquiries@cakeries.co.uk'];
 
         Mail::to($this->email)->send(new UserRegistration($user));
@@ -95,6 +100,9 @@ class UserController extends Controller
         Mail::to($user->email)->send(new UserWelcome($user));
 
         \Session::flash('Success_message', 'You have successfully registered');
+=======
+        \Session::flash('Success_message', 'You Have Successfully Registered');
+>>>>>>> 77078cc7ac9e761d2a0be84f29240d41d2685202
 
         return redirect()->route('myaccount');
     }
@@ -105,7 +113,10 @@ class UserController extends Controller
         $user = Auth::user();
 
         Auth::logout();
+<<<<<<< HEAD
         request()->session()->forget('cart');
+=======
+>>>>>>> 77078cc7ac9e761d2a0be84f29240d41d2685202
         return redirect()->route('login');
     }
 }

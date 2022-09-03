@@ -35,11 +35,15 @@ Single Cake || Cakeries
                         Cake colours, images and layout are for illustration ONLY. All our cakes are hand finished so the final product may vary. In case you want to change the colours then please add remarks during checkout or call us after placing the order.
                     </p>
                     <h5>Category : {{ $proddetail->category->name }} </h5>
+<<<<<<< HEAD
                     @if ($proddetail->category_id != 1)
                     <a class="btn btn-default btn-block colo" href="{{ route('addtocart',$proddetail->id) }}"><i class="fa fa-shopping-cart"></i> Add to Basket</a>
                     @elseif(($proddetail->category_id == 1))
                     <a class="btn btn-default btn-block colo" href="{{ url('/user/wedding-order') }}"><i class="fa fa-envelope-o"></i> Contact us</a>
                     @endif
+=======
+                    <a class="btn btn-default btn-block colo" href="{{ route('addtocart',$proddetail->id) }}"><i class="fa fa-shopping-cart"></i> Add to Basket</a>
+>>>>>>> 77078cc7ac9e761d2a0be84f29240d41d2685202
                 </div>
             </div>
         </div>
@@ -48,6 +52,7 @@ Single Cake || Cakeries
 <!--================End Product Details Area =================-->
 
 <!--================Similar Product Area =================-->
+<<<<<<< HEAD
 <section class="welcome_bakery_area">
     <div class="container">
         <div class="cake_feature_inner">
@@ -69,6 +74,27 @@ Single Cake || Cakeries
                 </div>
                 @endforeach
             </div>
+=======
+<section class="similar_product_area p_100">
+    <div class="container">
+        <div class="main_title">
+            <h2>Similar Products</h2>
+        </div>
+        <div class="row similar_product_inner">
+            @foreach($similarprod as $simprod)
+            <div class="col-lg-3 col-md-4 col-6">
+                <div class="cake_feature_item">
+                    <div class="cake_img">
+                        <img src="../upload/{{ $simprod->image->first()->source }}" alt="">
+                    </div>
+                    <div class="cake_text">
+                        <h3 style="font-size: 16px;font-weight:bolder;">{{ $simprod->name }}</h3>
+                        <a class="pest_btn" href="#">View Cake</a>
+                    </div>
+                </div>
+            </div>
+            @endforeach
+>>>>>>> 77078cc7ac9e761d2a0be84f29240d41d2685202
         </div>
     </div>
 </section>

@@ -28,7 +28,11 @@ Cart || Cakeries
                         <th scope="col">Product</th>
                         <th scope="col">Category</th>
                         <th scope="col">Description</th>
+<<<<<<< HEAD
                         <th scope="col">X</th>
+=======
+                        <th scope="col">Remove Item</th>
+>>>>>>> 77078cc7ac9e761d2a0be84f29240d41d2685202
                     </tr>
                 </thead>
                 <tbody>
@@ -44,6 +48,7 @@ Cart || Cakeries
                             {{ $product['item']['description'] }}
                         </td>
                         <td>
+<<<<<<< HEAD
                             <a href="{{ route('deleteitem',$product['id']) }}"><i class="fa fa-trash"></i></a>
                         </td>
                     </tr>
@@ -68,10 +73,39 @@ Cart || Cakeries
             <div align="right">
                 <a class="btn btn-default colo" href="{{ url('/cake/allcakes') }}"><i class="fa fa-shopping-cart"></i> Continue Shopping</a>
             </div>
+=======
+                            <a href="{{ route('deleteitem',$product['id']) }}"><i class="fa fa-times"></i></a>
+                        </td>
+                    </tr>
+                    @endforeach
+                    @elseif (!request()->session()->has('cart'))
+                    <tr>
+                        <td colspan="5">NO ITEM</td>
+                    </tr>
+                    @endif
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>
+                        <a class="btn btn-success" href="http://wa.me/447956798250" target="_blank"><i class="fa fa-whatsapp"> Order by Whatsapp</i> </a>
+                        </td>
+                        <td>
+                        <a class="btn btn-primary" href="tel:+447956798250"><i class="fa fa-phone"></i> Call to Order</a>
+                        </td>
+                        <td>
+                        <a class="btn btn-default colo" href="{{ url('/user/place-order') }}"><i class="fa fa-globe"></i> Order by Web</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+>>>>>>> 77078cc7ac9e761d2a0be84f29240d41d2685202
         </div>
     </div>
 </section>
 <!--================End Cart Table Area =================-->
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 77078cc7ac9e761d2a0be84f29240d41d2685202
 @endsection

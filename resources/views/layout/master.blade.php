@@ -6,7 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="keywords" content="Cakeries - egg and egg-less cakes | Cake Bakery " />
+<<<<<<< HEAD
     <meta name="description" content="Thank you for choosing Cakeries. Sweet treats for every occasion" />
+=======
+    <meta name="description" content="We specialise in egg and egg-less cakes. Be it a cake for a wedding, birthday, anniversary or any special occasion. We create all types of delicious cakes including: fresh cream cakes, butter cream cakes, icing cakes and chocolate cakes." />
+>>>>>>> 77078cc7ac9e761d2a0be84f29240d41d2685202
     <meta name="author" content="Dcode Arena" />
 
     <link rel="icon" href="img/fav-icon.png" type="image/x-icon" />
@@ -43,17 +47,29 @@
         <div class="top_header_area row m0">
             <div class="container">
                 <div class="float-left">
+<<<<<<< HEAD
                     <a href="#">Sweet treats for every occasion
                         <a href="tell:+2348037126346"><i class="fa fa-phone" aria-hidden="true"></i> 07956798250</a>
                         <a href="mailto:enquiries@cakeries.co.uk"><i class="fa fa-envelope-o" aria-hidden="true"></i> enquiries@cakeries.co.uk</a>
+=======
+                    <a href="#">Sweet Treats for every occassion
+                        <a href="tell:+2348037126346"><i class="fa fa-phone" aria-hidden="true"></i> 07956798250</a>
+                        <a href="mainto:enquiries@cakeries.co.uk"><i class="fa fa-envelope-o" aria-hidden="true"></i> enquiries@cakeries.co.uk</a>
+>>>>>>> 77078cc7ac9e761d2a0be84f29240d41d2685202
                 </div>
                 <div class="float-right">
                     @if(!Auth::check())
                     <ul class="h_social list_style">
                         <li><a href="{{ url('/login') }}">Sign in / Register</a></li>
+<<<<<<< HEAD
                         <li><a href="https://web.facebook.com/cakeriesuk" target="_blank"><i class="fa fa-facebook"></i></a></li>
                         <li><a href="https://twitter.com/cakeriesuk" target="_blank"><i class="fa fa-twitter"></i></a></li>
                         <li><a href="https://www.instagram.com/cakeriesuk/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+=======
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+>>>>>>> 77078cc7ac9e761d2a0be84f29240d41d2685202
                         <li class="shop_cart">
                             <a href="{{ url('/cart') }}" class="dropbtn">
                                 <i class="fa fa-shopping-cart"></i>
@@ -72,9 +88,15 @@
                                 <a href="{{ route('logout') }}" class="dropdown-item" style="color: #7b7b7b;">Sign out</a>
                             </div>
                         </li>
+<<<<<<< HEAD
                         <li><a href="https://web.facebook.com/cakeriesuk" target="_blank"><i class="fa fa-facebook"></i></a></li>
                         <li><a href="https://twitter.com/cakeriesuk" target="_blank"><i class="fa fa-twitter"></i></a></li>
                         <li><a href="https://www.instagram.com/cakeriesuk/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+=======
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+>>>>>>> 77078cc7ac9e761d2a0be84f29240d41d2685202
                         <li class="shop_cart">
                             <a href="{{ url('/cart') }}" class="dropbtn">
                                 <i class="fa fa-shopping-cart"></i>
@@ -89,7 +111,11 @@
         <div class="main_menu_two">
             <div class="container">
                 <nav class="navbar navbar-expand-lg navbar-light bg-light">
+<<<<<<< HEAD
                     <a class="navbar-brand" href="{{ url('/') }}"><img src="assets/img/logo.png" alt=""></a>
+=======
+                    <a class="navbar-brand" href="#"><img src="assets/img/logo.png" alt=""></a>
+>>>>>>> 77078cc7ac9e761d2a0be84f29240d41d2685202
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="my_toggle_menu">
                             <span></span>
@@ -139,9 +165,15 @@
                             </div>
                             <p>Our cakes are designed and tailored to suit our customer’s individual requirements.</p>
                             <ul class="nav">
+<<<<<<< HEAD
                                 <li><a href="https://web.facebook.com/cakeriesuk" target="_blank"><i class="fa fa-facebook"></i></a></li>
                                 <li><a href="https://twitter.com/cakeriesuk" target="_blank"><i class="fa fa-twitter"></i></a></li>
                                 <li><a href="https://www.instagram.com/cakeriesuk/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+=======
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+>>>>>>> 77078cc7ac9e761d2a0be84f29240d41d2685202
                             </ul>
                         </aside>
                     </div>
@@ -151,9 +183,16 @@
                                 <h3>Quick links</h3>
                             </div>
                             <ul class="list_style">
+<<<<<<< HEAD
                                 <li><a href="{{ url('/about') }}">Who we are</a></li>
                                 <li><a href="{{ url('/cake/allcakes') }}">Our Cakes</a></li>
                                 <li><a href="{{ url('/flavours-and-fillings') }}">Flavour</a></li>
+=======
+                                <li><a href="#">Who we are</a></li>
+                                <li><a href="#">Our Cakes</a></li>
+                                <li><a href="#">News</a></li>
+                                <li><a href="#">Offers</a></li>
+>>>>>>> 77078cc7ac9e761d2a0be84f29240d41d2685202
                             </ul>
                         </aside>
                     </div>
@@ -163,9 +202,15 @@
                                 <h3>Help</h3>
                             </div>
                             <ul class="list_style">
+<<<<<<< HEAD
                                 <li><a href="{{ url('/testimonials') }}">Testimonial</a></li>
                                 <li><a href="{{ url('/contact') }}">Contact</a></li>
                                 <li><a href="{{ url('/terms-and-condition') }}">Terms and Conditions</a></li>
+=======
+                                <li><a href="#">Terms & Condition</a></li>
+                                <li><a href="#">FAQ</a></li>
+                                <li><a href="#">Contact</a></li>
+>>>>>>> 77078cc7ac9e761d2a0be84f29240d41d2685202
                             </ul>
                         </aside>
                     </div>
@@ -175,7 +220,11 @@
                                 <h3>Contact Info</h3>
                             </div>
                             <h4>07956798250</h4>
+<<<<<<< HEAD
                             <p>Bowling Green Row London</p>
+=======
+                            <p>Bowling Green Row Greenwich London</p>
+>>>>>>> 77078cc7ac9e761d2a0be84f29240d41d2685202
                             <h5>enquiries@cakeries.co.uk</h5>
                             <h5>booking@cakeries.co.uk</h5>
                         </aside>

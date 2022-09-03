@@ -8,8 +8,11 @@ use App\Category;
 use App\Product;
 use App\Image;
 use App\Order;
+<<<<<<< HEAD
 use App\Mail\UserOrderApproved;
 use Mail;
+=======
+>>>>>>> 77078cc7ac9e761d2a0be84f29240d41d2685202
 
 class PostController extends Controller
 {
@@ -70,6 +73,10 @@ class PostController extends Controller
         $this->validate($request, [
             'category_id' => 'required',
             'name' => 'required',
+<<<<<<< HEAD
+=======
+            'description' => 'required',
+>>>>>>> 77078cc7ac9e761d2a0be84f29240d41d2685202
         ]);
 
         // Save Record into Product DB
@@ -96,6 +103,7 @@ class PostController extends Controller
         return back();
     }
 
+<<<<<<< HEAD
      // Update Products function
      public function updateproduct(Request $request, $id)
      {
@@ -121,11 +129,17 @@ class PostController extends Controller
          return back();
      }
 
+=======
+>>>>>>> 77078cc7ac9e761d2a0be84f29240d41d2685202
     public function deleteproduct($id)
     {
         // Delete product
         $product = Product::where('id', $id)->first();
+<<<<<<< HEAD
         $file_path = public_path() . '/upload/' . $product->image->first()->source;
+=======
+        $file_path = public_path() . '/upload/' . $product->image->first()->source ;
+>>>>>>> 77078cc7ac9e761d2a0be84f29240d41d2685202
         unlink($file_path);
         $product->delete();
 
@@ -169,10 +183,17 @@ class PostController extends Controller
 
     public function acceptorder($id)
     {
+<<<<<<< HEAD
         Order::where(['id' => $id])
             ->update(array('status' => 1));
         $orderapproval = Order::where('id', $id)->first();
         Mail::to($orderapproval->user->email)->send(new UserOrderApproved($orderapproval));
+=======
+
+        Order::where(['id' => $id])
+            ->update(array('status' => 1));
+
+>>>>>>> 77078cc7ac9e761d2a0be84f29240d41d2685202
         \Session::flash('Success_message', 'Order Accepted Successfully');
 
         return back();

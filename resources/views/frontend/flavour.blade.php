@@ -17,6 +17,7 @@ Flavour and Fillings || Cakeries
     </div>
 </section>
 <!--================End Main Header Area =================-->
+<<<<<<< HEAD
 <!--================Flavour Main Area =================-->
 <section class="main_blog_area p_100">
     <div class="container">
@@ -86,11 +87,64 @@ Flavour and Fillings || Cakeries
                             <li><a href="{{ url('/cake/lady-cakes') }}">Ladies Cake<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
                         </ul>
                     </aside>
+=======
+<!--================Special Area =================-->
+<section class="special_area p_100">
+    <div class="container">
+        <div class="special_item_inner">
+            <div class="specail_item">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="s_item_left">
+                            <div class="main_title">
+                                <h2>Your Preferred Flavour </h2>
+                            </div>
+                            <ul class="list_style">
+                                <li><a href="#">Vanilla Cream Sponge </a></li>
+                                <li><a href="#">Red Velvet</a></li>
+                                <li><a href="#">Chocolate and Vanilla Marble </a></li>
+                                <li><a href="#">Light Fruit Cake</a></li>
+                                <li><a href="#">Lemon Cake </a></li>
+                                <li><a href="#">Rich Fruit Cake </a></li>
+                                <li><a href="#">Coconut Cake </a></li>
+                                <li><a href="#">Luxury Chocolate Madeira Cake </a></li>
+                                <li><a href="#">Carrot Cake </a></li>
+                                <li><a href="#">Madeira Cake </a></li>
+                                <li><a href="#">Strawberry Cake </a></li>
+                                <li><a href="#">Chocolate Orange Cake </a></li>
+                                <li><a href="#">White Chocolate Mud Cake </a></li>
+                                <li><a href="#">Lime and Coconut Cake </a></li>
+                                <li><a href="#">Lemon Cake </a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                    <div class="s_item_left">
+                            <div class="main_title">
+                                <h2>Your Preferred Filling </h2>
+                            </div>
+                            <ul class="list_style">
+                                <li><a href="#">Apricot Jam Filling  </a></li>
+                                <li><a href="#">Vanilla Buttercream </a></li>
+                                <li><a href="#">White Chocolate Cream Cheese Frosting </a></li>
+                                <li><a href="#">White Chocolate Buttercream</a></li>
+                                <li><a href="#">Strawberry Jam Filling </a></li>
+                                <li><a href="#">Cream Cheese Frosting </a></li>
+                                <li><a href="#">Chocolate Buttercream  </a></li>
+                                <li><a href="#">Lime and Coconut Frosting </a></li>
+                            </ul>
+                        </div>
+                    </div>
+>>>>>>> 77078cc7ac9e761d2a0be84f29240d41d2685202
                 </div>
             </div>
         </div>
     </div>
 </section>
+<<<<<<< HEAD
 <!--================End Flavour Main Area =================-->
+=======
+<!--================End Special Area =================-->
+>>>>>>> 77078cc7ac9e761d2a0be84f29240d41d2685202
 
 @endsection

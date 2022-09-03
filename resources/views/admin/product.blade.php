@@ -1,5 +1,8 @@
 @extends('layout.app1')
+<<<<<<< HEAD
 
+=======
+>>>>>>> 77078cc7ac9e761d2a0be84f29240d41d2685202
 @section('title')
 Products || Cakeries
 @endsection
@@ -17,8 +20,12 @@ Products || Cakeries
             <h3 class="text-themecolor">
                 @if (date("H") < 12) <h1 style="font-size: 20px;">Good morning <img src="../assets/img/morning1.png">, {{ Auth::user()->profile->first()->fname }}</h1>
                     @elseif (date("H") >= 12 && date("H") < 16) <h1 style="font-size: 20px;">Good afternoon <img src="../assets/img/afternoon.png">, {{ Auth::user()->profile->first()->fname }}</h1>
+<<<<<<< HEAD
                         @elseif (date("H") >= 15 && date("H") < 24)</h1>
                             <h1 style="font-size: 20px;">Good evening <img src="../assets/img/evening.png">, {{ Auth::user()->profile->first()->fname }}</h1>
+=======
+                        @elseif (date("H") >= 15 && date("H") < 24)</h1> <h1 style="font-size: 20px;">Good evening <img src="../assets/img/evening.png">, {{ Auth::user()->profile->first()->fname }}</h1>
+>>>>>>> 77078cc7ac9e761d2a0be84f29240d41d2685202
                             @endif
             </h3>
         </div>
@@ -43,8 +50,13 @@ Products || Cakeries
                                 <label class="control-label">Category Name:</label>
                                 <select class="form-control" name="category_id">
                                     <option selected disabled>Select Category</option>
+<<<<<<< HEAD
                                     @foreach($categories as $prod)
                                     <option value="{{ $prod->id }}">{{ $prod->name }}</option>
+=======
+                                    @foreach($categories as $cat)
+                                    <option value="{{ $cat->id }}">{{ $cat->name }}</option>
+>>>>>>> 77078cc7ac9e761d2a0be84f29240d41d2685202
                                     @endforeach
                                 </select>
                             </div>
@@ -124,7 +136,11 @@ Products || Cakeries
                                                     <i class="fa fa-tasks"></i> Action
                                                 </button>
                                                 <div class="dropdown-menu">
+<<<<<<< HEAD
                                                     <a class="dropdown-item" href="#" data-toggle="modal" data-target="#edit{{ $prod->id }}">Edit</a>
+=======
+                                                    <a class="dropdown-item" href="#">Edit</a>
+>>>>>>> 77078cc7ac9e761d2a0be84f29240d41d2685202
                                                     <div class="dropdown-divider"></div>
                                                     <a class="dropdown-item" href="#" data-toggle="modal" data-target="#featured{{ $prod->id }}">Set as Featured</a>
                                                     <div class="dropdown-divider"></div>
@@ -137,6 +153,7 @@ Products || Cakeries
                                             </div>
                                         </td>
                                         <!-- modal content -->
+<<<<<<< HEAD
                                         <div id="edit{{ $prod->id }}" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
                                             <div class="modal-dialog">
                                                 <div class="modal-content">
@@ -176,6 +193,8 @@ Products || Cakeries
                                         </div>
                                         <!-- /.modal -->
                                         <!-- modal content -->
+=======
+>>>>>>> 77078cc7ac9e761d2a0be84f29240d41d2685202
                                         <div id="delete{{ $prod->id }}" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
                                             <div class="modal-dialog">
                                                 <div class="modal-content">

@@ -8,11 +8,15 @@ use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Auth;
 use App\Order;
 use App\Profile;
+<<<<<<< HEAD
 use App\Contact;
 use Mail;
 use App\Mail\UserContact;
 use App\Mail\UserOrder;
 use App\Mail\UserOrderNotification;
+=======
+use App\Cart;
+>>>>>>> 77078cc7ac9e761d2a0be84f29240d41d2685202
 
 class PostController extends Controller
 {
@@ -41,18 +45,26 @@ class PostController extends Controller
             'occasion' => 'required',
             'size' => 'required',
             'color' => 'required',
+<<<<<<< HEAD
             'flavour' => 'required',
             'filling' => 'required',
+=======
+>>>>>>> 77078cc7ac9e761d2a0be84f29240d41d2685202
             'collection_date' => 'required',
             'collection_type' => 'required',
         ]);
 
         // Save Record into Order DB
+<<<<<<< HEAD
+=======
+
+>>>>>>> 77078cc7ac9e761d2a0be84f29240d41d2685202
         foreach ($request['product_id'] as $pi) {
             $order = new Order();
             $order->user_id = $user->id;
             $order->product_id = $pi;
             $order->occasion = $request->input('occasion');
+<<<<<<< HEAD
             $order->other_occasion = $request->input('other_occasion');
             $order->size = $request->input('size');
             $order->other_size = $request->input('other_size');
@@ -61,17 +73,27 @@ class PostController extends Controller
             $order->other_flavour = $request->input('other_flavour');
             $order->filling = $request->input('filling');
             $order->other_filling = $request->input('other_filling');
+=======
+            $order->others = $request->input('others');
+            $order->size = $request->input('size');
+            $order->color = $request->input('color');
+>>>>>>> 77078cc7ac9e761d2a0be84f29240d41d2685202
             $order->collection_date = $request->input('collection_date');
             $order->collection_type = $request->input('collection_type');
             $order->comment = $request->input('comment');
             $order->status = 0;
             if (Auth::user()->profile->first()->phone == NULL) {
+<<<<<<< HEAD
                 return redirect()->back()->with('warning_message', 'Incomplete profile, kindly complete your profile to continue');
+=======
+                return redirect()->back()->with('warning_message', 'Incomplete Profile, kindly complete your profile to continue');
+>>>>>>> 77078cc7ac9e761d2a0be84f29240d41d2685202
             } else {
                 $order->save();
             }
         }
         request()->session()->forget('cart');
+<<<<<<< HEAD
 
         $this->email = ['enquiries@cakeries.co.uk'];
 
@@ -80,6 +102,9 @@ class PostController extends Controller
         Mail::to($user->email)->send(new UserOrderNotification($user));
 
         \Session::flash('Success_message', 'You have successfully placed order, we wil get in touch with you shortly');
+=======
+        \Session::flash('Success_message', 'You Have Successfully Placed Order, We wil get in touch with you shortly');
+>>>>>>> 77078cc7ac9e761d2a0be84f29240d41d2685202
 
         return redirect()->route('myorder');
     }
@@ -110,6 +135,7 @@ class PostController extends Controller
         $profile->street = $request->input('street');
         $profile->save();
 
+<<<<<<< HEAD
         \Session::flash('Success_message', '✔ Profile updated succeffully');
 
         return back();
@@ -146,4 +172,10 @@ class PostController extends Controller
 
         return redirect()->route('myaccount');
     }
+=======
+        \Session::flash('Success_message', '✔ Profile Updated Succeffully');
+
+        return back();
+    }
+>>>>>>> 77078cc7ac9e761d2a0be84f29240d41d2685202
 }

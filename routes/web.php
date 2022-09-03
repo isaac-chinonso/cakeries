@@ -19,15 +19,22 @@ Route::get('/testimonials', 'Frontend\PageController@testimonial');
 
 Route::get('/flavours-and-fillings', 'Frontend\PageController@flavour');
 
+<<<<<<< HEAD
 Route::get('/terms-and-condition', 'Frontend\PageController@terms');
 
+=======
+>>>>>>> 77078cc7ac9e761d2a0be84f29240d41d2685202
 Route::get('/contact', 'Frontend\PageController@contact');
 
 Route::get('/product-details/{id}/{slug?}', 'Frontend\PageController@productdetails')->name('productdetails')->where('slug', '[\w\d\-\_]+');
 
 Route::get('/add-to-cart/{product}', 'Frontend\CartController@addtocart')->name('addtocart');
 
+<<<<<<< HEAD
 Route::get('/cart', 'Frontend\CartController@cart')->name('cart');
+=======
+Route::get('/cart', 'Frontend\CartController@cart');
+>>>>>>> 77078cc7ac9e761d2a0be84f29240d41d2685202
 
 Route::get('/delete/{id}', 'Frontend\CartController@removeItem')->name('deleteitem');
 
@@ -74,10 +81,13 @@ Route::group(['middleware' => 'auth', 'prefix' => 'user', 'before' => 'user'], f
 
     Route::get('/my-order', 'Frontend\PostController@myorder')->name('myorder');
 
+<<<<<<< HEAD
     Route::get('/wedding-order', 'Frontend\PostController@weddingorder');
 
     Route::post('/save-wedding-order', 'Frontend\PostController@saveweddingorder');
 
+=======
+>>>>>>> 77078cc7ac9e761d2a0be84f29240d41d2685202
 });
 
 Route::group(['middleware' => 'auth', 'prefix' => 'admin', 'before' => 'admin'], function () {
@@ -102,8 +112,11 @@ Route::group(['middleware' => 'auth', 'prefix' => 'admin', 'before' => 'admin'],
 
     Route::get('/products', 'Admin\PageController@adminproduct');
 
+<<<<<<< HEAD
     Route::post('/update-product/{id}', 'Admin\PostController@updateproduct')->name('updateproduct');
 
+=======
+>>>>>>> 77078cc7ac9e761d2a0be84f29240d41d2685202
     Route::get('/archived-products', 'Admin\PageController@archivedproduct');
 
     Route::get('/featured-products', 'Admin\PageController@featuredproduct');
