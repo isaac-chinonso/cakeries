@@ -1,4 +1,5 @@
 @extends('layout.app1')
+
 @section('title')
 Products || Cakeries
 @endsection
